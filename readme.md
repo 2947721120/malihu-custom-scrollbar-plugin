@@ -1,44 +1,43 @@
 malihu custom scrollbar plugin
 ================================
 
-Highly customizable custom scrollbar jQuery plugin. Features include: 
+高度可定制的自定义滚动条的jQuery插件。功能包括: 
+*垂直或水平滚动条（S）
+*可调的滚动动量
+*鼠标滚轮，键盘和触摸支持
+*准备通过CSS使用主题和定制
+*支持RTL方向
+*为滚动条的功能完全控制选项参数
+*触发动作，如滚动，更新，破坏等方法。
+*用户定义的回调函数
+*可选/可搜索内容
 
-* Vertical and/or horizontal scrollbar(s)  
-* Adjustable scrolling momentum 
-* Mouse-wheel, keyboard and touch support 
-* Ready-to-use themes and customization via CSS 
-* RTL direction support 
-* Option parameters for full control of scrollbar functionality 
-* Methods for triggering actions like scroll-to, update, destroy etc. 
-* User-defined callbacks 
-* Selectable/searchable content
-
-#### Installation
+#### 安装
 
 Bower: `bower install malihu-custom-scrollbar-plugin` 
 
 npm: `npm install malihu-custom-scrollbar-plugin` 
 
-#### Usage 
+#### 使用
 
 `$(selector).mCustomScrollbar();` 
 
-###### Using with [Browserify](http://browserify.org/)
+###### 使用 [Browserify](http://browserify.org/)
 
     var $ = require('jquery');
     require('malihu-custom-scrollbar-plugin')($);
 
 
-#### For more information 
+#### 更多信息 
 
 * [Plugin homepage and documentation](http://manos.malihu.gr/jquery-custom-content-scroller) 
 
-Requirements
+要求
 -------------------------
 
-jQuery version **1.6.0** or higher
+jQuery的版本 **1.6.0** 或更高
 
-Browser compatibility
+浏览器的兼容性
 -------------------------
 
 * Internet Explorer 8+ 
