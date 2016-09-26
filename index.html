@@ -1,0 +1,1609 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Google Chrome Frame -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!-- Reset iPhone Viewport & Initial Scale -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery custom content scroller &#8211; 		malihu
+					 | web design</title>
+<link rel="shortcut icon" href="http://manos.malihu.gr/wp-content/themes/malihu/images/favicon.ico" type="image/x-icon">
+<!-- HTML5 and css3 media queries - old IE enabling scripts -->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+<!-- rss, pingback url, archives etc. -->
+<link rel="alternate" type="text/xml" title="malihu Posts RSS feed - RSS .92" href="http://feeds.feedburner.com/malihu" />
+<link rel="alternate" type="application/rss+xml" title="malihu Posts RSS feed - RSS 2.0" href="http://feeds.feedburner.com/malihu" />
+<link rel="alternate" type="application/atom+xml" title="malihu Posts RSS feed - Atom 0.3" href="http://feeds.feedburner.com/malihu" />
+<link rel="alternate" type="application/rss+xml" title="malihu Comments RSS feed" href="http://feeds.feedburner.com/CommentsForMalihu" />
+<link href='http://fonts.googleapis.com/css?family=Damion|Oswald|Alice' rel='stylesheet' type='text/css'>
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="malihu &raquo; jQuery custom content scroller Comments Feed" href="http://manos.malihu.gr/jquery-custom-content-scroller/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/manos.malihu.gr\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.6.1"}};
+			!function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='https://api.w.org/' href='http://manos.malihu.gr/wp-json/' />
+<link rel='shortlink' href='http://manos.malihu.gr/?p=197' />
+<link rel="alternate" type="application/json+oembed" href="http://manos.malihu.gr/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fmanos.malihu.gr%2Fjquery-custom-content-scroller%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://manos.malihu.gr/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fmanos.malihu.gr%2Fjquery-custom-content-scroller%2F&#038;format=xml" />
+<script>
+	var blogURL="http://manos.malihu.gr",templateURL="http://manos.malihu.gr/wp-content/themes/malihu"; //useful vars for js
+</script>
+<!-- CSS -->
+<link rel="stylesheet" href="http://manos.malihu.gr/wp-content/themes/malihu/style.css" />
+</head>
+
+<body id="top" style="min-width:0;" itemscope itemtype="http://schema.org/WebPage">
+	<header class="clearfix" itemscope itemtype="http://schema.org/WPHeader">
+			
+			<style>
+				#malihu-cookies{
+					display: none;
+					clear: both;
+					width: 100%;
+					font-family: georgia,serif;
+					font-size: 13px;
+					position: absolute;
+					top: 10px;
+					color: #eb3755;
+					text-align: center;
+					padding: 5px 0;
+					font-style: italic;
+				}
+				#malihu-cookies-accept{
+					display: inline-block;
+					text-decoration: none;
+					text-transform: uppercase;
+					padding: 0 6px;
+					border-radius: 5px;
+					border: 1px solid #eb3755;
+					margin-left: 10px;
+					font-size: 10px;
+					font-style: normal;
+					text-shadow: none;
+					font-family: verdana;
+				}
+				/*#comments .comment-container,*/ /*#comments>ol{ overflow: auto; }*/
+				#comments .comment-container .comment-content{ /*min-width: 320px;*/ }
+				#comments li{ min-width: 480px; }
+				#comments>ol>li{ overflow: auto; min-width: 0; }
+				.gen-ad-placeholder .in-content-responsive-ad{ display:inline-block;min-width:100px;max-width:970px;width:100%;max-height:300px; }
+				.articles .single .content ul._faq-list{ list-style: none; }
+				._faq-list ._faq{ padding: 10px 0; }
+				._faq-list ._q h4{ font-size: 115% }
+				._faq-list ._q a{ text-decoration: none; }
+				._faq-list ._q + div{ display: none; border-left: 1px dotted #ccc; margin: 10px; padding: 10px 20px; }
+				._faq-list ._faq:target ._q + div{ display: block; }
+				#filterform{ margin: 20px; }
+				#filterinput{
+					padding: 8px;
+					width: 320px;
+					max-width: 100%;
+					border: 0;
+					background: rgba(255,255,255,.9);
+					color: #3927bb;
+					font-family: georgia,serif;
+					font-size: 15px;
+					font-style: italic;
+					-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+					-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
+					-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2); -moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2); box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
+				}
+				.comment-content :not(pre)>code[class*="language-"]{ padding: 0; }
+				#comments .comment-content p>br+code{
+					display: inline;
+					margin-top: 0;
+				}
+				@media (max-width: 640px){
+					.links-ad, .content .gen-ad-placeholder{ /*display: none;*/ }
+					code{ word-break: break-all; }
+					#comments code{ word-break: normal; }
+					#comments ul li{ margin-left: 40px; }
+				}
+				/* custom ads */
+				.m-custom-ad{
+					display: block;
+					text-decoration: none;
+				}
+				.m-custom-ad h4{
+					font-size: 27px;
+					font-family: "Alice",georgia,serif;
+					font-weight: 400;
+					margin: -5px 0 5px 45px;
+					line-height: 1;
+					display: inline-block;
+				}
+				.m-custom-ad h4 + span em{
+				    font-weight: 700;
+    				font-size: 15px;
+				}
+				a.m-custom-ad:hover{ color: inherit; }
+				a.m-custom-ad:hover h4, a.m-custom-ad:hover em{ color: #eb3755; }
+				.aside-ad-link{
+					font-size: 17px;
+					text-decoration: none;
+					display: block;
+					margin-bottom: 8px;
+				}
+				.aside-ad-link em{
+					font-size: 23px;
+					font-style: normal;
+				}
+				.blocked{ margin-bottom: 0; }
+				.md-link-ad{
+					display: inline-block;
+					border: 1px solid #999;
+					padding: 2px 6px;
+					box-shadow: 0 1px 1px rgba(0,0,0,.2);
+					border-radius: 15px;
+					text-decoration: none;
+					font-weight: 700;
+					font-size: 95%;
+					margin: 0 5px 5px 0;
+				}
+				.ad-2x468 > *{
+					display: inline-block;
+					margin: 10px 10px 0 0;
+				}
+			</style>
+			<div id="malihu-cookies">
+				<span>This website uses cookies to <a href="http://www.google.com/intl/en/policies/privacy/partners/" target="_blank" title="learn more">personalise ads and to analyse traffic</a> <a id="malihu-cookies-accept" href="#">ok</a></span>
+			</div>
+			
+			<div class="logo"><a href="http://manos.malihu.gr">malihu</a></div>
+			<span class="tagline">web design</span>
+			<nav>
+				<ul class="clearfix">
+					<li><a href="http://feeds.feedburner.com/malihu" title="RSS feed" target="_blank" class="gen-icon social-rss"><span><svg version="1.1" viewBox="0 0 32 32" preserveAspectRatio="xMinYMin meet"><g></g><path d="M4.259 23.467c-2.35 0-4.259 1.917-4.259 4.252 0 2.349 1.909 4.244 4.259 4.244 2.358 0 4.265-1.895 4.265-4.244-0-2.336-1.907-4.252-4.265-4.252zM0.005 10.873v6.133c3.993 0 7.749 1.562 10.577 4.391 2.825 2.822 4.384 6.595 4.384 10.603h6.16c-0-11.651-9.478-21.127-21.121-21.127zM0.012 0v6.136c14.243 0 25.836 11.604 25.836 25.864h6.152c0-17.64-14.352-32-31.988-32z"></path></svg></span></a></li>
+					<li><a href="https://twitter.com/malihu" title="@Twitter" target="_blank" class="gen-icon social-twitter"><span><svg version="1.1" viewBox="0 0 32 32" preserveAspectRatio="xMinYMin meet"><g></g><path d="M32 6.076c-1.177 0.522-2.443 0.875-3.771 1.034 1.355-0.813 2.396-2.099 2.887-3.632-1.269 0.752-2.674 1.299-4.169 1.593-1.198-1.276-2.904-2.073-4.792-2.073-3.626 0-6.565 2.939-6.565 6.565 0 0.515 0.058 1.016 0.17 1.496-5.456-0.274-10.294-2.888-13.532-6.86-0.565 0.97-0.889 2.097-0.889 3.301 0 2.278 1.159 4.287 2.921 5.465-1.076-0.034-2.088-0.329-2.974-0.821-0.001 0.027-0.001 0.055-0.001 0.083 0 3.181 2.263 5.834 5.266 6.437-0.551 0.15-1.131 0.23-1.73 0.23-0.423 0-0.834-0.041-1.235-0.118 0.835 2.608 3.26 4.506 6.133 4.559-2.247 1.761-5.078 2.81-8.154 2.81-0.53 0-1.052-0.031-1.566-0.092 2.905 1.863 6.356 2.95 10.064 2.95 12.076 0 18.679-10.004 18.679-18.68 0-0.285-0.006-0.568-0.019-0.849 1.283-0.926 2.396-2.082 3.276-3.398z"></path></svg></span></a></li>
+					<li><a href="http://www.facebook.com/malihuz" title="on Facebook" target="_blank" class="gen-icon social-fb"><span><svg version="1.1" viewBox="0 0 32 32" preserveAspectRatio="xMinYMin meet"><g></g><path d="M17.996 32h-5.996v-16h-4v-5.514l4-0.002-0.007-3.248c0-4.498 1.22-7.236 6.519-7.236h4.412v5.515h-2.757c-2.064 0-2.163 0.771-2.163 2.209l-0.008 2.76h4.959l-0.584 5.514-4.37 0.002-0.004 16z"></path></svg></span></a></li>
+					<li><a href="https://github.com/malihu" title="GitHub" target="_blank" class="gen-icon social-github"><span><svg version="1.1" viewBox="0 0 32 32" preserveAspectRatio="xMinYMin meet"><g></g><path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM25.502 25.502c-1.235 1.235-2.672 2.204-4.272 2.881-0.406 0.172-0.819 0.323-1.238 0.453v-2.398c0-1.26-0.432-2.188-1.297-2.781 0.542-0.052 1.039-0.125 1.492-0.219s0.932-0.229 1.438-0.406 0.958-0.388 1.359-0.633 0.786-0.563 1.156-0.953 0.68-0.833 0.93-1.328 0.448-1.089 0.594-1.781 0.219-1.456 0.219-2.289c0-1.615-0.526-2.99-1.578-4.125 0.479-1.25 0.427-2.609-0.156-4.078l-0.391-0.047c-0.271-0.031-0.758 0.083-1.461 0.344s-1.492 0.688-2.367 1.281c-1.24-0.344-2.526-0.516-3.859-0.516-1.344 0-2.625 0.172-3.844 0.516-0.552-0.375-1.075-0.685-1.57-0.93s-0.891-0.411-1.188-0.5-0.573-0.143-0.828-0.164-0.419-0.026-0.492-0.016-0.125 0.021-0.156 0.031c-0.583 1.479-0.635 2.839-0.156 4.078-1.052 1.135-1.578 2.51-1.578 4.125 0 0.833 0.073 1.596 0.219 2.289s0.344 1.286 0.594 1.781 0.56 0.938 0.93 1.328 0.755 0.708 1.156 0.953 0.854 0.456 1.359 0.633 0.984 0.313 1.438 0.406 0.95 0.167 1.492 0.219c-0.854 0.583-1.281 1.51-1.281 2.781v2.445c-0.472-0.14-0.937-0.306-1.394-0.5-1.6-0.677-3.037-1.646-4.272-2.881s-2.204-2.672-2.881-4.272c-0.7-1.655-1.055-3.414-1.055-5.23s0.355-3.575 1.055-5.23c0.677-1.6 1.646-3.037 2.881-4.272s2.672-2.204 4.272-2.881c1.655-0.7 3.415-1.055 5.23-1.055s3.575 0.355 5.23 1.055c1.6 0.677 3.037 1.646 4.272 2.881s2.204 2.672 2.881 4.272c0.7 1.655 1.055 3.415 1.055 5.23s-0.355 3.575-1.055 5.23c-0.677 1.6-1.646 3.037-2.881 4.272z"></path></svg></span></a></li>
+				</ul>
+			</nav>
+	</header>
+	
+	<nav id="drawer-menu">
+		<div class="drawer">
+							<div id="drawer-about-section">
+					<h4><a href="http://manos.malihu.gr/about">Hello!</a></h4>
+					<p class="clearfix"><span class="malihu-avatar-medium"></span> <strong>I&rsquo;m Manos</strong> and this is my blog which is all about creating and sharing (free) stuff for developing websites.<br /> <a href="http://manos.malihu.gr/about#more-about">Read more</a> or <a href="http://manos.malihu.gr/contact">contact me</a>.</p>
+				</div>
+						<ul>
+				<li class="categories-list">
+					<h4>stuff</h4>
+					<ul>
+						<li><a href="http://manos.malihu.gr/category/plugins">Plugins</a></li>
+						<li><a href="http://manos.malihu.gr/category/templates-web-apps">Templates &amp; web apps</a></li>
+						<li><a href="http://manos.malihu.gr/category/tutorials-snippets">Tutorials &amp; snippets</a></li>
+						<li><a href="http://manos.malihu.gr/category/wordpress">WordPress</a></li>
+					</ul>
+				</li>
+									<li class="whats-new-list">		
+													<div id="text-4" class="whats-up widget_text"><h3>What’s new?</h3>			<div class="textwidget"><p>Updated <a href="http://manos.malihu.gr/page-scroll-to-id/">Page scroll to id plugin</a> to version 1.1.5.<br />
+Updated <a href="http://manos.malihu.gr/jquery-custom-content-scroller/">Custom scrollbar plugin</a> to version 3.1.5.<br />
+Updated <a href="http://manos.malihu.gr/jquery-thumbnail-scroller/">Thumbnail scroller plugin</a> to version 2.0.3. </p>
+</div>
+		</div>						 
+						 
+					</li>
+								<li class="popular-list">
+					<h4>popular</h4>
+					<ul>
+						<li><a href="http://manos.malihu.gr/jquery-custom-content-scroller/">jQuery custom scrollbar</a></li>
+						<li><a href="http://manos.malihu.gr/page-scroll-to-id/">Page scroll to id</a></li>
+						<li><a href="http://manos.malihu.gr/jquery-thumbnail-scroller/">jQuery image/thumbnail scroller</a></li>
+					</ul>
+				</li>
+				<li class="tags-list">
+					<h4>tags</h4>
+					<ul class='wp-tag-cloud'>
+	<li><a href='http://manos.malihu.gr/tag/actionscript/' class='tag-link-47 tag-link-position-1' title='4 topics' style='font-size: 14.4615384615px;'>Actionscript</a></li>
+	<li><a href='http://manos.malihu.gr/tag/css-2/' class='tag-link-37 tag-link-position-2' title='2 topics' style='font-size: 12.5576923077px;'>css</a></li>
+	<li><a href='http://manos.malihu.gr/tag/image-gallery/' class='tag-link-30 tag-link-position-3' title='3 topics' style='font-size: 13.5961538462px;'>image gallery</a></li>
+	<li><a href='http://manos.malihu.gr/tag/jquery/' class='tag-link-4 tag-link-position-4' title='21 topics' style='font-size: 20px;'>jquery</a></li>
+	<li><a href='http://manos.malihu.gr/tag/navigation/' class='tag-link-16 tag-link-position-5' title='7 topics' style='font-size: 16.1923076923px;'>navigation</a></li>
+	<li><a href='http://manos.malihu.gr/tag/page-scroll-to-id/' class='tag-link-49 tag-link-position-6' title='3 topics' style='font-size: 13.5961538462px;'>page-scroll-to-id</a></li>
+	<li><a href='http://manos.malihu.gr/tag/resizable/' class='tag-link-50 tag-link-position-7' title='1 topic' style='font-size: 11px;'>resizable</a></li>
+	<li><a href='http://manos.malihu.gr/tag/single-page-template/' class='tag-link-46 tag-link-position-8' title='1 topic' style='font-size: 11px;'>Single-page template</a></li>
+</ul>
+				</li>
+				<li>
+					<h4>archive</h4>
+					<a href="/blog/">查看所有文章按时间顺序</a>
+				</li>
+			</ul>
+		</div>
+		<a href="#" id="drawer-menu-toggle"><span></span><span></span><span></span></a>
+		<a href="#" id="drawer-menu-close">&times;</a>
+	</nav>
+		<section id="content" class="clearfix">
+		<section id="main" itemscope itemprop="mainContentOfPage">
+			<div class="articles">
+																							<article class="single" itemscope itemtype="http://schema.org/CreativeWork">
+						<h1 itemprop="headline">jQuery的自定义内容滚动</h1>
+						<p class="article-meta">
+															<span class="update-info" itemprop="dateModified">最后更新于7月11日, 2016</span> 
+							 
+							O原来在8月1日发表, 2010 by <a href="http://manos.malihu.gr/author/admin/" title="Posts by malihu" rel="author">malihu</a>, under <a href="http://manos.malihu.gr/category/plugins/" rel="category tag">Plugins</a>.</p>
+						
+						<div class="links-ad">
+							<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+							<!-- Links ad -->
+							<ins class="adsbygoogle"
+							     style="display:inline-block;min-width:100px;max-width:468px;width:100%;max-height:100px;min-height:15px"
+							     data-ad-client="ca-pub-2489642366368969"
+							     data-ad-slot="8235110738"></ins>
+							<script>
+							(adsbygoogle = window.adsbygoogle || []).push({});
+							</script>
+						</div>
+						
+						<div class="content clearfix" itemprop="text">
+																<span class="featured-image" itemprop="image">
+									<img width="400" height="300" src="http://manos.malihu.gr/wp-content/uploads/2014/10/custom-scrollbar.png" class=" wp-post-image" alt="jQuery custom content scroller" title="" srcset="http://manos.malihu.gr/wp-content/uploads/2014/10/custom-scrollbar.png 400w, http://manos.malihu.gr/wp-content/uploads/2014/10/custom-scrollbar-300x225.png 300w" sizes="(max-width: 400px) 100vw, 400px" />									</span>
+														<p>高度可定制的自定义滚动条的jQuery插件。功能包括垂直或水平滚动条（S），可滚动鼠标滚轮（通过动量，
+<a href="https://github.com/brandonaaron/jquery-mousewheel" target="_blank">jQuery 鼠标滚轮插件</a>), 键盘和触摸支持，准备通过CSS使用主题和定制，RTL方向的支持，为全面控制滚动条的功能选项参数，方法触发行动像滚动、更新、破坏等，用户定义的回调和更多.</p>
+<p><span id="more-197"></span></p>
+<div class="main-links clearfix">
+<div><a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/complete_examples.html" title="View demo" class="demo-link" target="_blank">view demo</a> <a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/scrollbar_themes_demo.html" target="_blank">Scrollbar themes</a><br />
+<a href="#expand-info">more</a>
+<div class="expand-info"><a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/nested_scrollbars_demo.html" target="_blank">Nested scrollbars</a><br />
+<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/callbacks_example.html" target="_blank">Callbacks demo</a><br />
+<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/rtl_direction_demo.html" target="_blank">RTL direction</a><br />
+<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/disable_destroy_example.html" target="_blank">disable/destroy methods</a></div>
+</div>
+<div><a href="https://github.com/malihu/malihu-custom-scrollbar-plugin/archive/master.zip" title="Download files" class="download-link malihu-dl-modal">download</a> <a href="https://github.com/malihu/malihu-custom-scrollbar-plugin/releases" target="_blank">Release archive</a><br />
+<a href="https://github.com/malihu/malihu-custom-scrollbar-plugin" target="_blank">Project on GitHub</a></div>
+</div>
+<p>Current version <strong itemprop="version">3.1.5</strong> (<a href="http://manos.malihu.gr/jquery-custom-content-scroller/2/">Changelog</a>)<br />
+<a href="#expand-info">从版本升级 2</a> <meta itemprop="dateModified" content="2016-7-11"/></p>
+<div class="expand-info">
+当从版本升级 <a href="https://github.com/malihu/malihu-custom-scrollbar-plugin/tree/2.x" target="_blank">2.x</a> to <a href="https://github.com/malihu/malihu-custom-scrollbar-plugin/tree/3.x" target="_blank">3.x</a> it&#8217;s 使用3版本的CSS和PNG文件的重要。3版本是向后兼容的，它与# 8217；也是一个巨大的改革。一个明显的变化是，你不# 8217；不需要调用 <em>update</em>方法手动（脚本自动完成）。更多信息见<a href="http://manos.malihu.gr/jquery-custom-content-scroller/2/">changelog</a>. </p>
+<p>版本2仍然保持<del>and updated</del> <a href="https://github.com/malihu/malihu-custom-scrollbar-plugin/tree/2.x" target="_blank">here</a>.</p>
+<hr />
+</div>
+<ul class="post-main-links">
+<li><a href="#get-started-section" title="Usage guide" rel="ps2id">开始</a></li>
+<li><a href="#configuration-section" title="Plugin options" rel="ps2id">配置
+</a></li>
+<li><a href="#methods-section" title="Plugin methods" rel="ps2id">方法</a></li>
+<li><a href="#styling-section" title="Scrollbar styling and themes" rel="ps2id">造型</a></li>
+<li><a href="#callbacks-section" title="User-defined callbacks" rel="ps2id">回调</a></li>
+<li><a href="http://manos.malihu.gr/jquery-custom-content-scroller/3/">代码示例和教程</a></li>
+<li><a href="http://manos.malihu.gr/jquery-custom-content-scroller/4/" title="Frequently Asked Questions">FAQ</a></li>
+</ul>
+<h2 id="get-started-section">How to use it</h2>
+<p>Get started by <a href="https://github.com/malihu/malihu-custom-scrollbar-plugin/archive/master.zip">下载档案</a> 其中包含的插件文件（和大量的HTML演示和示例）。提取和上传<em>jquery.mCustomScrollbar.concat.min.js</em>, <em>jquery.mCustomScrollbar.css</em> 和<em>mCSB_buttons.png</em> 到您的Web服务器（或您可以 <a href="#expand-info">从CDN负载插件文件</a>). </p>
+<div class="expand-info">
+而不是主机插件的文件在您的Web服务器，你可以直接从CDN负载等 <a href="http://www.jsdelivr.com/" target="_blank">jsdelivr</a>,GitHub等.</p>
+<ul>
+<li><strong>jsdelivr</strong>版本/精缩
+<ul>
+<li>//cdn.c2cbc.com/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.concat.min.js</li>
+<li>//cdn.c2cbc.com/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css</li>
+<li>//cdn.c2cbc.com/jquery.mcustomscrollbar/3.0.6/mCSB_buttons.png</li>
+</ul>
+</li>
+<li><strong>Github</strong> latest/minified
+<ul>
+<li>//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js</li>
+<li>//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.min.css</li>
+<li>//malihu.github.io/custom-scrollbar/mCSB_buttons.png</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<hr />
+</div>
+<h3>HTML</h3>
+<p>包括 <em>jquery.mCustomScrollbar.css</em> 在你的HTML文档的头部标签 (<a href="#expand-info">更多信息</a>)</p>
+<div class="expand-info">
+<em><a href="https://github.com/malihu/malihu-custom-scrollbar-plugin/blob/master/jquery.mCustomScrollbar.css" target="_blank">jquery.mCustomScrollbar.css</a></em> 包含自定义滚动条和主题造型。它通常应包括在你的HTML头标签（通常在任何脚本标签）。如果你想减少HTTP请求和/或在一个文件中有你的网站的样式表，你应该移动/复制滚动条在你的主CSS文件中的造型. </p>
+<p><em>mCSB_buttons.png</em>包含所有的按钮箭头（向上，向下，左，右） <a href="http://css-tricks.com/css-sprites/" target="_blank">图像精灵</a> 所有的滚动条的主题。插件包含PSD源（源文件/ mcsb_buttons。PSD）所以你可以更改或添加您自己的。该文件应与插件样式相同的目录. </p>
+<hr />
+</div>
+<pre data-language=&#8221;html&#8221;>
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/path/to/jquery.mCustomScrollbar.css&quot; /&gt;
+</pre>
+<p>包括jQuery库（如果你的项目不# 8217；不使用它已经）和 <em>jquery.mCustomScrollbar.concat.min.js</em> 在<a href="#expand-info">头部标签或在你的文档的底部，只是在关闭身体标签</a> </p>
+<div class="expand-info">
+一些框架和CMS包括jQuery库的头部标签以确保它与# 8217；当其他脚本的加载请求。通常情况下，包括在HTML文档底部的JS文件（就在关闭标签）建议更好的性能。在任何情况下，jQuery必须包含第一，在插件脚本. </p>
+<hr />
+</div>
+<pre data-language=&#8221;html&#8221;>
+&lt;script src=&quot;https://ajax.c2cmalls.com/ajax/libs/jquery/1.11.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/path/to/jquery.mCustomScrollbar.concat.min.js&quot;&gt;&lt;/script&gt;
+</pre>
+<h3>CSS</h3>
+<p>元素（S）你想添加滚动条（S）应该有一个溢出块，是一个高度典型的CSS属性（或最大高度）值，自动溢出价值（或隐藏）和内容需要足够长的滚动。水平滚动条的元素，应该有一个宽度（或最大宽度）值集. </p>
+<p>如果您希望设置通过JavaScript你的元素的高度/宽度，可以使用 <a href="#plugin-data-setHeight" rel="ps2id"><code>setHeight</code></a>/<a href="#plugin-data-setWidth" rel="ps2id"><code>setWidth</code></a> 选项参数.</p>
+<h3>初始化</h3>
+<h4>通过JavaScript初始化</h4>
+<p>文件包含后，调用 <em>mCustomScrollbar</em>功能上 <a href="http://learn.jquery.com/using-jquery-core/selecting-elements/" target="_blank">元素选择器</a> 你想添加滚动条（S） </p>
+<pre data-language=&#8221;javascript&#8221;>
+&lt;script&gt;
+    (function($){
+        $(window).on(&quot;load&quot;,function(){
+            $(&quot;.content&quot;).mCustomScrollbar();
+        });
+    })(jQuery);
+&lt;/script&gt;
+</pre>
+<p><a href="#expand-info">更多信息</a> </p>
+<div class="expand-info">
+代码被包裹在 <code>(function($){ ... })(jQuery);</code>. 这确保没有冲突和其他图书馆使用jQuery <code>$</code> shortcut (see <a href="http://learn.jquery.com/using-jquery-core/avoid-conflicts-other-libraries/" target="_blank">避免与其他库冲突</a> 更多信息）。插件函数被调用<code>$(window).on(&quot;load&quot;)</code> 所以它执行后，所有页面元素（如图像）加载. </p>
+<p>您可以更改函数选择器 <code>&quot;.content&quot;</code> to <a href="http://learn.jquery.com/using-jquery-core/selecting-elements/" target="_blank">任何你想要的选择器</a> (一个元素的ID，类名，js变量等.). 例如，如果你想自定义滚动条上的ID元素的运用 <code>content-1</code>, 你只是做: </p>
+<pre data-language=&#8221;javascript&#8221;>
+$(&quot;#content-1&quot;).mCustomScrollbar();
+</pre>
+<p>你也可能有 <strong>多个选择器</strong> 通过插入逗号分隔的值 </p>
+<pre data-language=&#8221;javascript&#8221;>
+$(&quot;.content,#content-1&quot;).mCustomScrollbar();
+</pre>
+<p>上面的代码添加到自定义滚动条）的每一个元素与类的名字 <code>content</code> 和b）具有标识的元素 <code>content-1</code>. </p>
+<p>此外，你可能想打电话 <em>mCustomScrollbar</em>多次在一个页面中，以设置不同的选项 (<a href="#configuration-section" rel="_pageScroll2id">配置和选项参数说明如下</a>) 每个选择器 </p>
+<pre data-language=&#8221;javascript&#8221;>
+&lt;script&gt;
+  (function($){
+    $(window).on(&quot;load&quot;,function(){
+      $(&quot;#vertical-content&quot;).mCustomScrollbar({
+        theme:&quot;light-3&quot;,
+        scrollButtons:{
+          enable:true
+        }
+      });
+      $(&quot;#horizontal-content&quot;).mCustomScrollbar({
+        axis:&quot;x&quot;,
+        theme:&quot;3d&quot;
+      });
+    });
+  })(jQuery);
+&lt;/script&gt;
+</pre>
+<hr />
+</div>
+<h4>初始化通过HTML</h4>
+<p>添加类 <code>mCustomScrollbar</code> 任何元素，你想添加自定义滚动条（S）的默认选项。或者，通过HTML数据属性设置其轴 <code>data-mcs-axis</code> (e.g. <code>&quot;x&quot;</code>水平和<code>&quot;y&quot;</code> 垂直）及其主题 <code>data-mcs-theme</code>. 例如: </p>
+<pre data-language=&#8221;markup&#8221;>
+&lt;div class=&quot;mCustomScrollbar&quot; data-mcs-theme=&quot;dark&quot;&gt;
+  &lt;!-- 你的内容 --&gt;
+&lt;/div&gt;
+</pre>
+<h3>基本配置和选项参数</h3>
+<h4>axis</h4>
+<p>默认情况下，该脚本将垂直滚动条。添加一个水平或两轴滚动条，mcustomscrollbar函数调用设置为轴选项<code>&quot;x&quot;</code> or <code>&quot;yx&quot;</code> respectively </p>
+<pre data-language=&#8221;javascript&#8221;>
+$(&quot;.content&quot;).mCustomScrollbar({
+    axis:&quot;x&quot; // 水平滚动条
+});
+</pre>
+<pre data-language=&#8221;javascript&#8221;>
+$(&quot;.content&quot;).mCustomScrollbar({
+    axis:&quot;yx&quot; //垂直和水平滚动条
+});
+</pre>
+<h4>主题</h4>
+<p>迅速改变滚动条的外观，设置主题选项参数的任何<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/scrollbar_themes_demo.html" target="_blank">准备使用主题</a> 可在 <a href="https://github.com/malihu/malihu-custom-scrollbar-plugin/blob/master/jquery.mCustomScrollbar.css" target="_blank">jquery.mCustomScrollbar.css</a>,例如:  </p>
+<pre data-language=&#8221;javascript&#8221;>
+$(&quot;.content&quot;).mCustomScrollbar({
+    theme:&quot;dark&quot;
+});
+</pre>
+<style type="text/css">
+	.in-content-responsive-ad{ width: 468px; height: 60px; overflow: hidden; }
+	@media (min-width:800px){ .in-content-responsive-ad{ width: 728px; height: 90px; } }
+	@media (min-width:1280px){ .in-content-responsive-ad{ width: 970px; height: 90px; } }
+</style>
+<div class="gen-ad-placeholder"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- In-content responsive ad -->
+<ins class="adsbygoogle in-content-responsive-ad"
+     style="display:block"
+     data-ad-client="ca-pub-2489642366368969"
+     data-ad-slot="6507572735"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+<h2 id="configuration-section">配置</h2>
+<p>你可以配置你的滚动条（S）使用以下选项参数 <em>mCustomScrollbar</em> 功能<br />
+<strong>使用</strong> <code>$(selector).mCustomScrollbar({ option: value });</code>
+<div class="plugin-data">
+<dl id="plugin-data-setWidth">
+<dt><pre data-language=&#8221;javascript&#8221;>setWidth: false</pre></dt>
+<dd>设置您的内容的宽度（覆盖CSS宽度），在像素值（整数）或百分比（字符串）.</dd>
+</dl>
+<dl id="plugin-data-setHeight">
+<dt><pre data-language=&#8221;javascript&#8221;>setHeight: false</pre></dt>
+<dd>设置您的内容的高度（覆盖CSS高度），在像素值（整数）或百分比（字符串）.</dd>
+</dl>
+<dl id="plugin-data-setTop">
+<dt><pre data-language=&#8221;javascript&#8221;>setTop: 0</pre></dt>
+<dd>设置初始CSS顶级物业的内容，接受字符串值（CSS排名）.<br />
+		实例: <code>setTop: &quot;-100px&quot;</code>.</dd>
+</dl>
+<dl id="plugin-data-setLeft">
+<dt><pre data-language=&#8221;javascript&#8221;>setLeft: 0</pre></dt>
+<dd>设置初始CSS留下的财产内容，接受字符串值（CSS左边位置）.<br />
+		实例: <code>setLeft: &quot;-100px&quot;</code>.</dd>
+</dl>
+<dl id="plugin-data-axis">
+<dt><pre data-language=&#8221;javascript&#8221;>axis: &quot;string&quot;</pre></dt>
+<dd>定义内容滚动轴（滚动条添加到元素的类型：垂直和水平/）.<br />
+		可利用的价值: <code>&quot;y&quot;</code>, <code>&quot;x&quot;</code>, <code>&quot;yx&quot;</code>. </p>
+<ul>
+<li><code>axis: &quot;y&quot;</code> &#8211;垂直滚动条（默认）</li>
+<li><code>axis: &quot;x&quot;</code> &#8211; 水平滚动条</li>
+<li><code>axis: &quot;yx&quot;</code> &#8211; 垂直和水平滚动条</li>
+</ul>
+</dd>
+</dl>
+<dl id="plugin-data-scrollbarPosition">
+<dt><pre data-language=&#8221;javascript&#8221;>scrollbarPosition: &quot;string&quot;</pre></dt>
+<dd>设置有关内容滚动条的位置.<br />
+	可利用的价值: <code>&quot;inside&quot;</code>, <code>&quot;outside&quot;</code>.<br />
+	设置<code>scrollbarPosition: &quot;inside&quot;</code>（默认）使滚动条出现在元。设置 <code>scrollbarPosition: &quot;outside&quot;</code> 使滚动条出现在元。请注意，将值设置为 <code>&quot;outside&quot;</code> 需要你的元素（或父元素）有CSS <code>position: relative</code> （否则滚动条将被定位在相对于文档的根元素）. </dd>
+</dl>
+<dl id="plugin-data-scrollInertia">
+<dt><pre data-language=&#8221;javascript&#8221;>scrollInertia: integer</pre></dt>
+<dd>以毫秒为单位设定动画持续时间的滚动动量.<br />
+更高的值等于更大的滚动动量，转化为更平滑/更进步的动画。设置<code>0</code>禁用.</dd>
+</dl>
+<dl id="plugin-data-autoDraggerLength">
+<dt><pre data-language=&#8221;javascript&#8221;>autoDraggerLength: boolean</pre></dt>
+<dd>启用或禁用有关自动调整滚动条匕首长度滚动量（与浏览器的原生滚动条同样的行为）.<br />
+		设置 <code>autoDraggerLength: false</code>当你想你的滚动条（总是）有固定的大小. </dd>
+</dl>
+<dl id="plugin-data-autoHideScrollbar">
+<dt><pre data-language=&#8221;javascript&#8221;>autoHideScrollbar: boolean</pre></dt>
+<dd>启用或禁用自动隐藏滚动条时无效.<br />
+		设置 <code>autoHideScrollbar: true</code> 将隐藏滚动条）滚动时处于空闲状态和/或光标不在滚动区域的.<br />
+		请注意一些特殊的主题 &#8220;minimal&#8221; 覆盖此选项.</dd>
+</dl>
+<dl id="plugin-data-autoExpandScrollbar">
+<dt><pre data-language=&#8221;javascript&#8221;>autoExpandScrollbar: boolean</pre></dt>
+<dd>启用或禁用自动扩大滚动条光标或拖动滚动条时. </dd>
+</dl>
+<dl id="plugin-data-alwaysShowScrollbar">
+<dt><pre data-language=&#8221;javascript&#8221;>alwaysShowScrollbar: integer</pre></dt>
+<dd>始终保持滚动条可见，即使没有什么滚动. </p>
+<ul>
+<li><code>alwaysShowScrollbar: 0</code> &#8211; 禁用（默认）</li>
+<li><code>alwaysShowScrollbar: 1</code> &#8211; 保持牵引机轨可见</li>
+<li><code>alwaysShowScrollbar: 2</code> &#8211; 保持所有组件滚动条（匕首，铁路，按钮等）可见</li>
+</ul>
+</dd>
+</dl>
+<dl id="plugin-data-snapAmount">
+<dt><pre data-language=&#8221;javascript&#8221;>snapAmount: integer</pre></dt>
+<dd>使滚动卡扣到固定数目的像素的倍数。有用像滚动的表格数据，图像缩略图或幻灯片的情况下，你需要防止停止中途的元素滚动。请注意，您的元素必须是相同的宽度或高度在为了这个正常工作.<br />
+要为垂直和水平滚动设置不同的值，使用一个数组: <code>[y,x]</code></dd>
+</dl>
+<dl id="plugin-data-snapOffset">
+<dt><pre data-language=&#8221;javascript&#8221;>snapOffset: integer</pre></dt>
+<dd>设置一个偏移量（以像素为单位）的snapamount选项。例如，您需要在表头中抵消表行的管理量. </dd>
+</dl>
+<dl id="plugin-data-mouseWheel-enable">
+<dt><pre data-language=&#8221;javascript&#8221;>mouseWheel:{ enable: boolean }</pre></dt>
+<dd>启用或禁用内容滚动通过鼠标滚轮.</dd>
+</dl>
+<dl id="plugin-data-mouseWheel-scrollAmount">
+<dt><pre data-language=&#8221;javascript&#8221;>mouseWheel:{ scrollAmount: integer }</pre></dt>
+<dd>设置鼠标滚轮滚动量（以像素为单位）。默认值 <code>&quot;auto&quot;</code> 调整滚动量根据滚动内容长度.</dd>
+</dl>
+<dl id="plugin-data-mouseWheel-axis">
+<dt><pre data-language=&#8221;javascript&#8221;>mouseWheel:{ axis: &quot;string&quot; }</pre></dt>
+<dd>定义鼠标滚轮滚动轴在垂直和水平滚动条的存在.<br />
+	设置<code>axis: &quot;y&quot;</code>（默认）垂直或<code>axis: &quot;x&quot;</code>水平滚动.</dd>
+</dl>
+<dl id="plugin-data-mouseWheel-preventDefault">
+<dt><pre data-language=&#8221;javascript&#8221;>mouseWheel:{ prevent>查看示例< boolean }</pre></dt>
+<dd>防止自动滚动到达终点或滚动开始的时候父元素（相同的行为与浏览器的原生滚动条）的默认行为.</dd>
+</dl>
+<dl id="plugin-data-mouseWheel-deltaFactor">
+<dt><pre data-language=&#8221;javascript&#8221;>mouseWheel:{ deltaFactor: integer }</pre></dt>
+<dd>设置像素的一个车轮槽口卷轴的数目。默认值为“自动”使用OS /浏览器的价值.</dd>
+</dl>
+<dl id="plugin-data-mouseWheel-normalizeDelta">
+<dt><pre data-language=&#8221;javascript&#8221;>mouseWheel:{ normalizeDelta: boolean }</pre></dt>
+<dd>启用或禁用鼠标滚轮（增量）加速。 设置<code>normalizeDelta: true</code>转换鼠标滚轮差值为-1或1.</dd>
+</dl>
+<dl id="plugin-data-mouseWheel-invert">
+<dt><pre data-language=&#8221;javascript&#8221;>mouseWheel:{ invert: boolean }</pre></dt>
+<dd>反转鼠标滚轮滚动的方向。 设置 <code>true</code> 向下或向右时，鼠标滚轮打开向上滚动.</dd>
+</dl>
+<dl id="plugin-data-mouseWheel-disableOver">
+<dt><pre data-language=&#8221;javascript&#8221;>mouseWheel:{ disableOver: [array] }</pre></dt>
+<dd>设置禁用鼠标滚轮的标签，当光标在他们.<br />
+		Default value: <pre data-language=&#8221;javascript&#8221;>[&quot;select&quot;,&quot;option&quot;,&quot;keygen&quot;,&quot;datalist&quot;,&quot;textarea&quot;]</pre></dd>
+</dl>
+<dl id="plugin-data-scrollButtons-enable">
+<dt><pre data-language=&#8221;javascript&#8221;>scrollButtons:{ enable: boolean }</pre></dt>
+<dd>启用或禁用滚动按钮.</dd>
+</dl>
+<dl id="plugin-data-scrollButtons-scrollAmount">
+<dt><pre data-language=&#8221;javascript&#8221;>scrollButtons:{ scrollAmount: integer }</pre></dt>
+<dd>设置滚动量（以像素为单位）的按钮。的默认值 <code>&quot;auto&quot;</code>调整按滚动内容长度滚动量.</dd>
+</dl>
+<dl id="plugin-data-scrollButtons-scrollType">
+<dt><pre data-language=&#8221;javascript&#8221;>scrollButtons:{ scrollType: &quot;string&quot; }</pre></dt>
+<dd>定义按键滚动型/行为. </p>
+<ul>
+<li><code>scrollType: &quot;stepless&quot;</code> &#8211; continuously scroll content while pressing the button (default)</li>
+<li><code>scrollType: &quot;stepped&quot;</code> &#8211; each button click scrolls content by a certain amount (defined in scrollAmount option above)</li>
+</ul>
+</dd>
+</dl>
+<dl id="plugin-data-scrollButtons-tabindex">
+<dt><pre data-language=&#8221;javascript&#8221;>scrollButtons:{ tabindex: integer }</pre></dt>
+<dd>设置按钮一个tabIndex值. </dd>
+</dl>
+<dl id="plugin-data-keyboard-enable">
+<dt><pre data-language=&#8221;javascript&#8221;>keyboard:{ enable: boolean }</pre></dt>
+<dd>启用或通过键盘禁用内容滚动.<br />
+		该插件支持的方向箭头（前，左，右，下），向上翻页（PAGE UP），向下翻页（PgDn键），Home和End键. </dd>
+</dl>
+<dl id="plugin-data-keyboard-scrollAmount">
+<dt><pre data-language=&#8221;javascript&#8221;>keyboard:{ scrollAmount: integer }</pre></dt>
+<dd>设置键盘箭头滚动量（以像素为单位）。的默认值<code>&quot;auto&quot;</code>调整按滚动内容长度滚动量.</dd>
+</dl>
+<dl id="plugin-data-keyboard-scrollType">
+<dt><pre data-language=&#8221;javascript&#8221;>keyboard:{ scrollType: &quot;string&quot; }</pre></dt>
+<dd>Define the keyboard arrows scrolling type/behavior. </p>
+<ul>
+<li><code>scrollType: &quot;stepless&quot;</code> &#8211;连续滚动的内容，同时按箭头键（默认）</li>
+<li><code>scrollType: &quot;stepped&quot;</code> &#8211; 每个键释放卷轴由一定量的内容（在scrollAmount选项中定义如上）</li>
+</ul>
+</dd>
+</dl>
+<dl id="plugin-data-contentTouchScroll">
+<dt><pre data-language=&#8221;javascript&#8221;>contentTouchScroll: integer</pre></dt>
+<dd>启用或禁用内容触摸刷卡滚动的触摸功能的设备.<br />
+		要完全禁用，设置 <code>contentTouchScroll: false</code>.<br />
+		整数值定义滚动势头所需的特定轴的关联项目(默认: <code>25</code>).</dd>
+</dl>
+<dl id="plugin-data-documentTouchScroll">
+<dt><pre data-language=&#8221;javascript&#8221;>documentTouchScroll: boolean</pre></dt>
+<dd>启用或禁用文件触摸刷卡滚动的触摸功能的设备.</dd>
+</dl>
+<dl id="plugin-data-advanced-autoExpandHorizontalScroll">
+<dt><pre data-language=&#8221;javascript&#8221;>advanced:{ autoExpandHorizontalScroll: boolean }</pre></dt>
+<dd>Auto-expand content horizontally (for <code>&quot;x&quot;</code> or <code>&quot;yx&quot;</code> axis).<br />
+		If set to <code>true</code>, content will expand horizontally to accommodate any floated/inline-block elements.<br />
+		Setting its value to <code>2</code> (integer) forces the non scrollHeight/scrollWidth method. A value of <code>3</code> forces the scrollHeight/scrollWidth method.</dd>
+</dl>
+<dl id="plugin-data-advanced-autoScrollOnFocus">
+<dt><pre data-language=&#8221;javascript&#8221;>advanced:{ autoScrollOnFocus: &quot;string&quot; }</pre></dt>
+<dd>设置将自动滚动内容，以他们的立场焦点时的元素/选择器列表.<br />
+		例如，按TAB键集中输入字段时，如果字段超出可视区域的内容将滚动到其顶部/左侧位置（相同的行为与浏览器的原生滚动条）.<br />
+		要完全禁用此功能，设置 <code>autoScrollOnFocus: false</code>.<br />
+		默认: <pre data-language=&#8221;javascript&#8221;>&quot;input,textarea,select,button,datalist,keygen,a[tabindex],area,object,[contenteditable=&#039;true&#039;]&quot;</pre></dd>
+</dl>
+<dl id="plugin-data-advanced-updateOnContentResize">
+<dt><pre data-language=&#8221;javascript&#8221;>advanced:{ updateOnContentResize: boolean }</pre></dt>
+<dd>更新滚动条）自动内容，元素或调整大小视.<br />
+		The value should be <code>true</code> （默认）流体布局/元素，添加/移除动态内容，隐藏/显示元素等.</dd>
+</dl>
+<dl id="plugin-data-advanced-updateOnImageLoad">
+<dt><pre data-language=&#8221;javascript&#8221;>advanced:{ updateOnImageLoad: boolean }</pre></dt>
+<dd>更新滚动条）自动每次元素中的图像是完全加载.<br />
+		Default value is <code>auto</code> which triggers the function only on <code>&quot;x&quot;</code> and <code>&quot;yx&quot;</code>轴（如需要）.<br />
+		The value should be <code>true</code> when your content contains images and you need the function to trigger on any axis.</dd>
+</dl>
+<dl id="plugin-data-advanced-updateOnSelectorChange">
+<dt><pre data-language=&#8221;javascript&#8221;>advanced:{ updateOnSelectorChange: &quot;string&quot; }</pre></dt>
+<dd>更新滚动条）时自动的特定选择改变的量和大小.<br />
+		有用的，当你需要自动更新的滚动条），类型元素的添加，删除或更改其大小各一次。<br/>例如，设置 <code>updateOnSelectorChange: &quot;ul li&quot;</code>将更新滚动条的每个元素中列表项被变更时.<br />
+		Setting the value to <code>true</code>, will update scrollbars each time any element is changed.<br />
+		To disable (default) set to <code>false</code>. </dd>
+</dl>
+<dl id="plugin-data-advanced-extraDraggableSelectors">
+<dt><pre data-language=&#8221;javascript&#8221;>advanced:{ extraDraggableSelectors: &quot;string&quot; }</pre></dt>
+<dd>添加额外的选择（s）表示，将释放滚动条在鼠标松开，pointerup，touchend等拖累.<br />
+		实例: <code>extraDraggableSelectors: &quot;.myClass, #myID&quot;</code> </dd>
+</dl>
+<dl id="plugin-data-advanced-releaseDraggableSelectors">
+<dt><pre data-language=&#8221;javascript&#8221;>advanced:{ releaseDraggableSelectors: &quot;string&quot; }</pre></dt>
+<dd>添加额外的选择（s）表示，将允许在滚动鼠标悬停/向上，pointermove/向上，touchend等拖累.<br />
+		实例: <code>releaseDraggableSelectors: &quot;.myClass, #myID&quot;</code> </dd>
+</dl>
+<dl id="plugin-data-advanced-autoUpdateTimeout">
+<dt><pre data-language=&#8221;javascript&#8221;>advanced:{ autoUpdateTimeout: integer }</pre></dt>
+<dd>设置以毫秒为单位的自动更新超时.<br />
+		默认的超时: <code>60</code> </dd>
+</dl>
+<dl id="plugin-data-theme">
+<dt><pre data-language=&#8221;javascript&#8221;>theme: &quot;string&quot;</pre></dt>
+<dd>Set the scrollbar theme.<br />
+		<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/scrollbar_themes_demo.html" target="_blank">View all ready-to-use themes</a><br />
+		All themes are contained in <a href="https://github.com/malihu/malihu-custom-scrollbar-plugin/blob/master/jquery.mCustomScrollbar.css" target="_blank">plugin&#8217;s CSS file (jquery.mCustomScrollbar.css)</a>.<br />
+		Default theme: <code>&quot;light&quot;</code></dd>
+</dl>
+<dl id="plugin-data-callbacks-onCreate">
+<dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
+      onCreate: function(){}
+}</pre></dt>
+<dd>A function to call when plugin markup is created.<br />
+		实例: <br />
+	<pre data-language=&#8221;javascript&#8221;>callbacks:{
+    onCreate:function(){
+      console.log(&quot;Plugin markup generated&quot;);
+    }
+}</pre></dd>
+</dl>
+<dl id="plugin-data-callbacks-onInit">
+<dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
+      onInit: function(){}
+}</pre></dt>
+<dd>当滚动条已初始化调用的函数 (<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/callbacks_example.html" target="_blank">demo</a>).<br />
+		实例: <br />
+	<pre data-language=&#8221;javascript&#8221;>callbacks:{
+    onInit:function(){
+      console.log(&quot;Scrollbars initialized&quot;);
+    }
+}</pre></dd>
+</dl>
+<dl id="plugin-data-callbacks-onScrollStart">
+<dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
+      onScrollStart: function(){}
+}</pre></dt>
+<dd>A function to call when scrolling starts (<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/callbacks_example.html" target="_blank">demo</a>).<br />
+		实例: <br />
+	<pre data-language=&#8221;javascript&#8221;>callbacks:{
+    onScrollStart:function(){
+      console.log(&quot;Scrolling started...&quot;);
+    }
+}</pre></dd>
+</dl>
+<dl id="plugin-data-callbacks-onScroll">
+<dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
+      onScroll: function(){}
+}</pre></dt>
+<dd>完成滚动时调用的函数 (<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/callbacks_example.html" target="_blank">demo</a>).<br />
+		实例: <br />
+	<pre data-language=&#8221;javascript&#8221;>callbacks:{
+    onScroll:function(){
+      console.log(&quot;Content scrolled...&quot;);
+    }
+}</pre></dd>
+</dl>
+<dl id="plugin-data-callbacks-whileScrolling">
+<dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
+      whileScrolling: function(){}
+}</pre></dt>
+<dd>调用一个函数，而滚动活跃 (<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/callbacks_example.html" target="_blank">demo</a>).<br />
+		实例: <br />
+	<pre data-language=&#8221;javascript&#8221;>callbacks:{
+    whileScrolling:function(){
+      console.log(&quot;Scrolling...&quot;);
+    }
+}</pre></dd>
+</dl>
+<dl id="plugin-data-callbacks-onTotalScroll">
+<dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
+      onTotalScroll: function(){}
+}</pre></dt>
+<dd>当滚动完成，内容滚动一路到最后调用函数（下/右） (<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/callbacks_example.html" target="_blank">demo</a>).<br />
+		实例: <br />
+	<pre data-language=&#8221;javascript&#8221;>callbacks:{
+    onTotalScroll:function(){
+      console.log(&quot;Scrolled to end of content.&quot;);
+    }
+}</pre></dd>
+</dl>
+<dl id="plugin-data-callbacks-onTotalScrollBack">
+<dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
+      onTotalScrollBack: function(){}
+}</pre></dt>
+<dd>A function to call when scrolling is completed and content is scrolled back to the beginning (top/left) (<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/callbacks_example.html" target="_blank">demo</a>).<br />
+		实例: <br />
+	<pre data-language=&#8221;javascript&#8221;>callbacks:{
+    onTotalScrollBack:function(){
+      console.log(&quot;Scrolled back to the beginning of content.&quot;);
+    }
+}</pre></dd>
+</dl>
+<dl id="plugin-data-callbacks-onTotalScrollOffset">
+<dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
+      onTotalScrollOffset: integer
+}</pre></dt>
+<dd>设置了onTotal滚动选项偏移.<br />
+		For example, setting <code>onTotalScrollOffset: 100</code> will trigger the onTotalScroll callback 100 pixels before the end of scrolling is reached.</dd>
+</dl>
+<dl id="plugin-data-callbacks-onTotalScrollBackOffset">
+<dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
+      onTotalScrollBackOffset: integer
+}</pre></dt>
+<dd>设置总回滚选项偏移.<br />
+		For example, setting <code>onTotalScrollBackOffset: 100</code> will trigger the onTotalScrollBack callback 100 pixels before the beginning of scrolling is reached.</dd>
+</dl>
+<dl id="plugin-data-callbacks-alwaysTriggerOffsets">
+<dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
+      alwaysTriggerOffsets: boolean
+}</pre></dt>
+<dd>Set the behavior of calling onTotalScroll and onTotalScrollBack offsets.<br />
+		By default, callback offsets will trigger repeatedly while content is scrolling within the offsets.<br />
+		Set <code>alwaysTriggerOffsets: false</code> when you need to trigger onTotalScroll and onTotalScrollBack callbacks once, each time scroll end or beginning is reached.</dd>
+</dl>
+<dl id="plugin-data-callbacks-onOverflowY">
+<dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
+      onOverflowY: function(){}
+}</pre></dt>
+<dd>A function to call when content becomes long enough and vertical scrollbar is added.<br />
+		实例: <br />
+	<pre data-language=&#8221;javascript&#8221;>callbacks:{
+    onOverflowY:function(){
+      console.log(&quot;Vertical scrolling required&quot;);
+    }
+}</pre></dd>
+</dl>
+<dl id="plugin-data-callbacks-onOverflowX">
+<dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
+      onOverflowX: function(){}
+}</pre></dt>
+<dd>A function to call when content becomes wide enough and horizontal scrollbar is added.<br />
+		实例: <br />
+	<pre data-language=&#8221;javascript&#8221;>callbacks:{
+    onOverflowX:function(){
+      console.log(&quot;Horizontal scrolling required&quot;);
+    }
+}</pre></dd>
+</dl>
+<dl id="plugin-data-callbacks-onOverflowYNone">
+<dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
+      onOverflowYNone: function(){}
+}</pre></dt>
+<dd>A function to call when content becomes short enough and vertical scrollbar is removed.<br />
+		实例: <br />
+	<pre data-language=&#8221;javascript&#8221;>callbacks:{
+    onOverflowYNone:function(){
+      console.log(&quot;Vertical scrolling is not required&quot;);
+    }
+}</pre></dd>
+</dl>
+<dl id="plugin-data-callbacks-onOverflowXNone">
+<dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
+      onOverflowXNone: function(){}
+}</pre></dt>
+<dd>A function to call when content becomes narrow enough and horizontal scrollbar is removed.<br />
+		实例: <br />
+	<pre data-language=&#8221;javascript&#8221;>callbacks:{
+    onOverflowXNone:function(){
+      console.log(&quot;Horizontal scrolling is not required&quot;);
+    }
+}</pre></dd>
+</dl>
+<dl id="plugin-data-callbacks-onBeforeUpdate">
+<dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
+      onBeforeUpdate: function(){}
+}</pre></dt>
+<dd>A function to call right before scrollbar(s) are updated.<br />
+		实例: <br />
+	<pre data-language=&#8221;javascript&#8221;>callbacks:{
+    onBeforeUpdate:function(){
+      console.log(&quot;Scrollbars will update&quot;);
+    }
+}</pre></dd>
+</dl>
+<dl id="plugin-data-callbacks-onUpdate">
+<dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
+      onUpdate: function(){}
+}</pre></dt>
+<dd>A function to call when scrollbar(s) are updated.<br />
+		实例: <br />
+	<pre data-language=&#8221;javascript&#8221;>callbacks:{
+    onUpdate:function(){
+      console.log(&quot;Scrollbars updated&quot;);
+    }
+}</pre></dd>
+</dl>
+<dl id="plugin-data-callbacks-onImageLoad">
+<dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
+      onImageLoad: function(){}
+}</pre></dt>
+<dd>A function to call each time an image inside the element is fully loaded and scrollbar(s) are updated.<br />
+		实例: <br />
+	<pre data-language=&#8221;javascript&#8221;>callbacks:{
+    onImageLoad:function(){
+      console.log(&quot;Image loaded&quot;);
+    }
+}</pre></dd>
+</dl>
+<dl id="plugin-data-callbacks-onSelectorChange">
+<dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
+      onSelectorChange: function(){}
+}</pre></dt>
+<dd>A function to call each time a type of element is added, removed or changes its size and scrollbar(s) are updated.<br />
+		实例: <br />
+	<pre data-language=&#8221;javascript&#8221;>callbacks:{
+    onSelectorChange:function(){
+      console.log(&quot;Scrollbars updated&quot;);
+    }
+}</pre></dd>
+</dl>
+<dl id="plugin-data-live">
+<dt><pre data-language=&#8221;javascript&#8221;>live: &quot;string&quot;</pre></dt>
+<dd>Enable or disable applying scrollbar(s) on all elements matching the current selector, now and in the future.<br />
+		Set <code>live: true</code> when you need to add scrollbar(s) on elements that do not yet exist in the page. These could be elements added by other scripts or plugins after some action by the user takes place (e.g. lightbox markup may not exist untill the user clicks a link).<br />
+		If you need at any time to disable or enable the live option, set <code>live: &quot;off&quot;</code> and <code>&quot;on&quot;</code> respectively.<br />
+		You can also tell the script to disable live option after the first invocation by setting <code>live: &quot;once&quot;</code>. </dd>
+</dl>
+<dl id="plugin-data-liveSelector">
+<dt><pre data-language=&#8221;javascript&#8221;>liveSelector: &quot;string&quot;</pre></dt>
+<dd>Set the matching set of elements (instead of the current selector) to add scrollbar(s), now and in the future.</dd>
+</dl>
+</div>
+<h2 id="methods-section">Plugin methods</h2>
+<p>Ways to execute various plugin actions programmatically from within your script(s). </p>
+<h3 id="methods-section-update">update</h3>
+<p><strong>Usage</strong> <code>$(selector).mCustomScrollbar(&quot;update&quot;);</code>
+<p>Call the <em>update</em> method to <strong>manually update existing scrollbars</strong> to accommodate new content or resized element(s). This method is by default called automatically by the script (via <code>updateOnContentResize</code> option) when the element itself, its content or scrollbar size changes. </p>
+<p><a href="#expand-info">view examples</a> </p>
+<div class="expand-info">
+<pre data-language=&#8221;javascript&#8221;>
+/* initialize plugin with auto-update options disabled */
+$(selector).mCustomScrollbar({
+  advanced:{
+    updateOnContentResize: false,
+    updateOnImageLoad: false
+  }
+});
+
+/* at some point in your js script/code update scrollbar manually */
+$(selector).mCustomScrollbar(&quot;update&quot;);
+</pre>
+<hr />
+</div>
+<h3 id="methods-section-scrollTo">scrollTo</h3>
+<p><strong>Usage</strong> <code>$(selector).mCustomScrollbar(&quot;scrollTo&quot;,position,options);</code> </p>
+<p>Call the <em>scrollTo</em> method to <strong>programmatically scroll the content</strong> to the position parameter (<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/scrollTo_demo.html" target="_blank">demo</a>). </p>
+<h4>position parameter</h4>
+<p> </p>
+<p>Position parameter can be: </p>
+<ul>
+<li><code>&quot;string&quot;</code>
+<ul>
+<li>e.g. element selector: <code>&quot;#element-id&quot;</code></li>
+<li>e.g. special pre-defined position: <code>&quot;bottom&quot;</code></li>
+<li>e.g. number of pixels less/more: <code>&quot;-=100&quot;</code>/<code>&quot;+=100&quot;</code></li>
+</ul>
+</li>
+<li><code>integer</code>
+<ul>
+<li>e.g. number of pixels: <code>100</code></li>
+</ul>
+</li>
+<li><code>[array]</code>
+<ul>
+<li>e.g. different y/x position: <code>[100,50]</code></li>
+</ul>
+</li>
+<li><code>object/function</code>
+<ul>
+<li>e.g. jQuery object: <code>$(&quot;#element-id&quot;)</code></li>
+<li>e.g. js object: <code>document.getelementbyid(&quot;element-id&quot;)</code></li>
+<li>e.g. function: <code>function(){ return 100; }</code></li>
+</ul>
+</li>
+</ul>
+<p>Pre-defined position strings: </p>
+<ul>
+<li><code>&quot;bottom&quot;</code> &#8211; scroll to bottom</li>
+<li><code>&quot;top&quot;</code> &#8211; scroll to top</li>
+<li><code>&quot;right&quot;</code> &#8211; scroll to right</li>
+<li><code>&quot;left&quot;</code> &#8211; scroll to left</li>
+<li><code>&quot;first&quot;</code> &#8211; scroll to the position of the first element within content</li>
+<li><code>&quot;last&quot;</code> &#8211; scroll to the position of the last element within content</li>
+</ul>
+<p><a href="#expand-info">view examples</a> </p>
+<div class="expand-info">
+Scroll to element with id &#8220;#el-1&#8243; </p>
+<pre data-language=&#8221;javascript&#8221;>
+$(selector).mCustomScrollbar(&quot;scrollTo&quot;,&quot;#el-1&quot;);
+</pre>
+<p>Scroll to top </p>
+<pre data-language=&#8221;javascript&#8221;>
+$(selector).mCustomScrollbar(&quot;scrollTo&quot;,&quot;top&quot;);
+</pre>
+<p>Scroll by 100 pixels down or right </p>
+<pre data-language=&#8221;javascript&#8221;>
+var val=100;
+$(selector).mCustomScrollbar(&quot;scrollTo&quot;,&quot;-=&quot;+val);
+</pre>
+<p>Scroll by 100 pixels up or left </p>
+<pre data-language=&#8221;javascript&#8221;>
+$(selector).mCustomScrollbar(&quot;scrollTo&quot;,&quot;+=100&quot;);
+</pre>
+<p>Scroll by 100 pixels down and by 50 pixels right </p>
+<pre data-language=&#8221;javascript&#8221;>
+$(selector).mCustomScrollbar(&quot;scrollTo&quot;,[&quot;-=100&quot;,&quot;-=50&quot;]);
+</pre>
+<p>Scroll to the fifth paragraph </p>
+<pre data-language=&#8221;javascript&#8221;>
+$(selector).mCustomScrollbar(&quot;scrollTo&quot;,$(&quot;p:eq(4)&quot;));
+</pre>
+<p>Scroll to the last element within your content </p>
+<pre data-language=&#8221;javascript&#8221;>
+$(selector).mCustomScrollbar(&quot;scrollTo&quot;,&quot;last&quot;);
+</pre>
+<p>Scroll to some variable value</p>
+<pre data-language=&#8221;javascript&#8221;>
+var val=document.getelementbyid(&quot;element-id&quot;);
+$(selector).mCustomScrollbar(&quot;scrollTo&quot;,val);
+</pre>
+<p>Scroll to 300 pixels </p>
+<pre data-language=&#8221;javascript&#8221;>
+$(selector).mCustomScrollbar(&quot;scrollTo&quot;,300);
+</pre>
+<hr />
+</div>
+<h4>方法选项</h4>
+<p> </p>
+<div class="plugin-data">
+<dl>
+<dt><pre data-language=&#8221;javascript&#8221;>scrollInertia: integer</pre></dt>
+<dd>以毫秒为单位滚动到目标的持续时间，值.<br />
+		实例:<br />
+	<pre data-language=&#8221;javascript&#8221;>$(selector).mCustomScrollbar(&quot;scrollTo&quot;,&quot;bottom&quot;,{
+    scrollInertia:3000
+});</pre></dd>
+</dl>
+<dl>
+<dt><pre data-language=&#8221;javascript&#8221;>scrollEasing: &quot;string&quot;</pre></dt>
+<dd>Scroll-to animation easing, values: <code>&quot;linear&quot;</code>, <code>&quot;easeOut&quot;</code>, <code>&quot;easeInOut&quot;</code>.<br />
+		实例:<br />
+	<pre data-language=&#8221;javascript&#8221;>$(selector).mCustomScrollbar(&quot;scrollTo&quot;,&quot;bottom&quot;,{
+    scrollEasing:&quot;easeOut&quot;
+});</pre></dd>
+</dl>
+<dl>
+<dt><pre data-language=&#8221;javascript&#8221;>moveDragger: boolean</pre></dt>
+<dd>滚动滚动条匕首（而不是内容）.<br />
+		实例:<br />
+	<pre data-language=&#8221;javascript&#8221;>$(selector).mCustomScrollbar(&quot;scrollTo&quot;,80,{
+    moveDragger:true
+});</pre></dd>
+</dl>
+<dl>
+<dt><pre data-language=&#8221;javascript&#8221;>timeout: integer</pre></dt>
+<dd>设置超时方法（默认的超时时间是为了与自动滚动更新工作60毫秒），以毫秒为单位的价值.<br />
+		实例:<br />
+	<pre data-language=&#8221;javascript&#8221;>$(selector).mCustomScrollbar(&quot;scrollTo&quot;,&quot;top&quot;,{
+    timeout:1000
+});</pre></dd>
+</dl>
+<dl>
+<dt><pre data-language=&#8221;javascript&#8221;>callbacks: boolean</pre></dt>
+<dd>触发用户定义后回调滚动到完成.<br />
+		实例:<br />
+	<pre data-language=&#8221;javascript&#8221;>$(selector).mCustomScrollbar(&quot;scrollTo&quot;,&quot;left&quot;,{
+    callbacks:false
+});</pre></dd>
+</dl>
+</div>
+<h3 id="methods-section-stop">stop</h3>
+<p><strong>Usage</strong> <code>$(selector).mCustomScrollbar(&quot;stop&quot;);</code>
+<p>停止所有正在运行的滚动动画（有用的，当你想中断先前 <em>scrollTo</em> method call).  </p>
+<h3 id="methods-section-disable">disable</h3>
+<p><strong>Usage</strong> <code>$(selector).mCustomScrollbar(&quot;disable&quot;);</code> </p>
+<p>Calling <em>disable</em> method will <strong>temporarily disable the scrollbar</strong> (<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/disable_destroy_example.html" target="_blank">demo</a>). Disabled scrollbars can be re-enable by calling the <em>update</em> method. </p>
+<p>To disable the scrollbar and reset its content position, set the method&#8217;s <em>reset</em> parameter to <code>true</code> </p>
+<pre data-language=&#8221;javascript&#8221;>$(selector).mCustomScrollbar(&quot;disable&quot;,true);</pre>
+<p><a href="#expand-info">view examples</a> </p>
+<div class="expand-info">
+<pre data-language=&#8221;javascript&#8221;>
+/* 初始化插件 */
+$(selector).mCustomScrollbar();
+
+/*在你的JS脚本/代码禁用滚动一些点 */
+$(selector).mCustomScrollbar(&quot;disable&quot;);
+
+/* 根据需要重新启用滚动 */
+$(selector).mCustomScrollbar(&quot;update&quot;);
+</pre>
+<hr />
+</div>
+<h3 id="methods-section-destroy">destroy</h3>
+<p><strong>Usage</strong> <code>$(selector).mCustomScrollbar(&quot;destroy&quot;);</code> </p>
+<p>Calling <em>destroy</em> method will <strong>completely remove the custom scrollbar</strong> and return the element to its original state (<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/disable_destroy_example.html" target="_blank">demo</a>). </p>
+<p><a href="#expand-info">view examples</a> </p>
+<div class="expand-info">
+<pre data-language=&#8221;javascript&#8221;>
+/* initialize plugin */
+$(selector).mCustomScrollbar();
+
+/* 在你的JS脚本/代码中的一些点破坏滚动条 */
+$(selector).mCustomScrollbar(&quot;destroy&quot;);
+</pre>
+<hr />
+</div>
+<h2 id="styling-section">滚动条的造型和放大器;主题</h2>
+<p>You can design and visually customize your scrollbars with <strong>pure CSS</strong>, using <em><a href="https://github.com/malihu/malihu-custom-scrollbar-plugin/blob/master/jquery.mCustomScrollbar.css" target="_blank">jquery.mCustomScrollbar.css</a></em> which contains the default/basic styling and all scrollbar themes. </p>
+<p>The easiest/quickest way is to select a ready-to-use scrollbar theme. For 实例: </p>
+<pre data-language=&#8221;javascript&#8221;>
+$(selector).mCustomScrollbar({
+  theme:&quot;dark&quot;
+});
+</pre>
+<p><a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/scrollbar_themes_demo.html" target="_blank">View all ready-to-use themes</a></p>
+<p>您可以直接在修改默认的样式或主题<em>jquery.mCustomScrollbar.css</em>或通过另一个样式覆盖CSS规则. </p>
+<h3>创建一个新的滚动条主题</h3>
+<p>为您的主题创建一个名称（例如： &#8220;my-theme&#8221;) 并将其设置为的值 <em>theme</em> 选项 </p>
+<pre data-language=&#8221;javascript&#8221;>
+$(selector).mCustomScrollbar({
+    theme:&quot;my-theme&quot;
+});
+</pre>
+<p>Your element will get the class &#8220;mCS-my-theme&#8221; (your theme-name with &#8220;mCS&#8221; prefix), so you can create your CSS using the <code>.mCS-my-theme</code> in your rules. For instance: </p>
+<pre data-language=&#8221;css&#8221;>
+.mCS-my-theme.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: red; }
+.mCS-my-theme.mCSB_scrollTools .mCSB_draggerRail{ background-color: white; } 
+/* and so on... */
+</pre>
+<p>以相同的方式可以克隆现有主题（例如 &#8220;dark&#8221;), 改变选择器（例如， <code>.mCS-dark</code>) 以自己的主题名称（例如： <code>.mCS-my-theme</code>) 并修改其CSS规则.</p>
+<h3>Scrollbar markup</h3>
+<p>该插件适用于特定ID（唯一）和/或类每一个滚动条元素/组件，这意味着你可以针对和修改任何滚动条在多个方面。 </p>
+<p>例如，用一个滚动每个元件得到一类独特的形式<code>_mCS_1</code>, <code>_mCS_2</code>等，每个容器的滚动条元素获得一个唯一的ID的形式 <code>mCSB_1_scrollbar_vertical</code>, <code>mCSB_2_scrollbar_vertical</code> etc. Every scrollbar dragger gets a unique id in the form of <code>mCSB_1_dragger_vertical</code>, <code>mCSB_2_dragger_vertical</code> etc. in addition to the class <code>mCSB_dragger</code>. All these mean that you can do stuff like: </p>
+<pre data-language=&#8221;css&#8221;>
+._mCS_1 .mCSB_dragger .mCSB_dragger_bar{ background-color: red; }
+
+._mCS_2 .mCSB_dragger .mCSB_dragger_bar{ background-color: green; }
+
+#mCSB_3_dragger_vertical .mCSB_dragger_bar{ background-color: blue; }
+
+#mCSB_1_scrollbar_vertical .mCSB_dragger{ height: 100px; }
+
+#mCSB_1_scrollbar_horizontal .mCSB_dragger{ width: 100px; }
+
+.mCSB_1_scrollbar .mCSB_dragger .mCSB_draggerRail{ width: 4px; }
+</pre>
+<p><a href="http://manos.malihu.gr/wp-content/uploads/2012/07/scrollbar_layout.png" target="_blank"><img src="http://manos.malihu.gr/wp-content/uploads/2012/07/scrollbar_layout.png" alt="Custom scrollbar layout" title="Custom scrollbar layout" width="400" height="560" class="alignnone size-full wp-image-579" srcset="http://manos.malihu.gr/wp-content/uploads/2012/07/scrollbar_layout.png 400w, http://manos.malihu.gr/wp-content/uploads/2012/07/scrollbar_layout-214x300.png 214w" sizes="(max-width: 400px) 100vw, 400px" /></a></p>
+<h2 id="callbacks-section">User-defined callbacks</h2>
+<p>您可以通过内部美其名曰触发自己的js函数（S） <em>mCustomScrollbar</em> 回调选项参数 </p>
+<pre data-language=&#8221;javascript&#8221;>
+$(&quot;.content&quot;).mCustomScrollbar({
+    callbacks:{
+        onScroll:function(){
+            myCustomFn(this);
+        }
+    }
+});
+
+function myCustomFn(el){
+    console.log(el.mcs.top);
+}
+</pre>
+<p>在上面的例子中，每个滚动事件结束的时间和内容已经停止滚动，内容的榜首位置将在浏览器的控制台登录。有对滚动事件的每个步骤提供的回调: </p>
+<ul>
+<li><code>onScrollStart</code> &#8211;触发滚动事件开始的时刻</li>
+<li><code>whileScrolling</code> &#8211; 而滚动事件被触发运行</li>
+<li><code>onScroll</code> &#8211; 当一个滚动事件触发完成</li>
+<li><code>onTotalScroll</code> &#8211; 当内容一路滚动到底部或右触发</li>
+<li><code>onTotalScrollBack</code> &#8211; 当内容已经滚动一路回顶部或左边触发</li>
+</ul>
+<p>可以设置为两个偏移值（像素）<code>onTotalScroll</code>和 <code>onTotalScrollBack</code>通过设置<code>onTotalScrollOffset</code> 和<code>onTotalScrollBackOffset</code>分别 (<a href="#expand-info">查看示例</a>). </p>
+<div class="expand-info">
+以下将触发回调函数，当内容滚动到下减100像素 </p>
+<pre data-language=&#8221;javascript&#8221;>
+$(&quot;.content&quot;).mCustomScrollbar({
+    callbacks:{
+        onTotalScroll:function(){
+            console.log(&quot;scrolled to bottom&quot;);
+        },
+    onTotalScrollOffset:100
+    }
+});
+</pre>
+<hr />
+</div>
+<p>默认, <code>onTotalScroll</code> 和 <code>onTotalScrollBack</code> 回调被重复触发。为了防止多次调用时，内容是他们的偏移量，集中 <code>alwaysTriggerOffsets</code>选项 <code>false</code> (<a href="#expand-info">查看示例</a>).</p>
+<div class="expand-info">
+<pre data-language=&#8221;javascript&#8221;>
+$(&quot;.content&quot;).mCustomScrollbar({
+    callbacks:{
+        onTotalScroll:function(){
+            console.log(&quot;scrolled to bottom&quot;);
+        },
+    onTotalScrollOffset:100,
+    alwaysTriggerOffsets:false
+    }
+});
+</pre>
+<hr />
+</div>
+<p>Additional callbacks: </p>
+<ul>
+<li><a href="#plugin-data-callbacks-onInit" rel="ps2id"><code>onInit</code></a></li>
+<li><a href="#plugin-data-callbacks-onOverflowY" rel="ps2id"><code>onOverflowY</code></a></li>
+<li><a href="#plugin-data-callbacks-onOverflowX" rel="ps2id"><code>onOverflowX</code></a></li>
+<li><a href="#plugin-data-callbacks-onOverflowYNone" rel="ps2id"><code>onOverflowYNone</code></a></li>
+<li><a href="#plugin-data-callbacks-onOverflowXNone" rel="ps2id"><code>onOverflowXNone</code></a></li>
+<li><a href="#plugin-data-callbacks-onUpdate" rel="ps2id"><code>onUpdate</code></a></li>
+<li><a href="#plugin-data-callbacks-onImageLoad" rel="ps2id"><code>onImageLoad</code></a></li>
+<li><a href="#plugin-data-callbacks-onSelectorChange" rel="ps2id"><code>onSelectorChange</code></a></li>
+</ul>
+<h3>返回值</h3>
+<p>该脚本返回一个数字值和相关对象来滚动，你可以在自己的函数使用</p>
+<ul>
+<li><code>this</code> &#8211; 包含滚动条原始元素（S）</li>
+<li><code>this.mcs.content</code> &#8211; 原来的内容作为包装jQuery对象</li>
+<li><code>this.mcs.top</code> &#8211; 内容顶部位置（像素）</li>
+<li><code>this.mcs.left</code> &#8211;左位置内容（像素）</li>
+<li><code>this.mcs.draggerTop</code> &#8211; 滚动牵引机顶位置（像素）</li>
+<li><code>this.mcs.draggerLeft</code> &#8211; 滚动条匕首左侧位置（像素）</li>
+<li><code>this.mcs.topPct</code> &#8211; 内容垂直滚动百分比</li>
+<li><code>this.mcs.leftPct</code> &#8211; 内容水平滚动百分比</li>
+<li><code>this.mcs.direction</code> &#8211; 内容滚动方向（y或x）</li>
+</ul>
+<p><a href="#expand-info">查看示例</a> </p>
+<div class="expand-info">
+当滚动到下装载更多内容</p>
+<pre data-language=&#8221;javascript&#8221;>
+$(selector).mCustomScrollbar({
+    callbacks:{
+        onTotalScroll:function(){
+            this.mcs.content.append(&quot;...&quot;);
+        }
+    }
+});
+</pre>
+<p>当内容中的至少一半被滚动运行代码 </p>
+<pre data-language=&#8221;javascript&#8221;>
+$(selector).mCustomScrollbar({
+    callbacks:{
+        whileScrolling:function(){
+            var pct=this.mcs.topPct;
+            if(pct&gt;=50){
+              /* do something... */
+            }
+        }
+    }
+});
+</pre>
+<hr />
+</div>
+<h2>具体的插件，jQuery的表情</h2>
+<div class="plugin-data">
+<dl>
+<dt><pre data-language=&#8221;javascript&#8221;>$(&quot;#myID:mcsInView&quot;)</pre></dt>
+<dd>选择元素）在你的内容是滚动视窗内的.<br />
+		作为条件: <code>$(&quot;#myID&quot;).is(&quot;:mcsInView&quot;);</code></dd>
+</dl>
+<dl>
+<dt><pre data-language=&#8221;javascript&#8221;>$(&quot;.content:mcsOverflow&quot;)</pre></dt>
+<dd>Select overflowed element(s) with visible scrollbar.<br />
+		As condition: <code>$(&quot;.content&quot;).is(&quot;:mcsOverflow&quot;);</code></dd>
+</dl>
+<dl>
+<dt><pre data-language=&#8221;javascript&#8221;>$(&quot;#myID:mcsInSight&quot;)</pre> <pre data-language=&#8221;javascript&#8221;>$(&quot;#myID:mcsInSight(exact)&quot;)</pre></dt>
+<dd>在您的内容中选择元素（县），是鉴于滚动视口。 使用 <code>exact</code>参数将包括在视图中的可滚动视口的有它们（甚至1个像素）的任何部分的元素.<br />
+		As condition: <code>$(&quot;#myID&quot;).is(&quot;:mcsInSight&quot;);</code>, <code>$(&quot;#myID&quot;).is(&quot;:mcsInSight(exact)&quot;);</code></dd>
+</dl>
+</div>
+<h2>插件依赖和; 要求</h2>
+<ul>
+<li><a href="http://jquery.com" target="_blank">jQuery</a>1.6.0或更高版本</li>
+<li>Mouse-wheel support
+<ul>
+<li><a href="https://github.com/brandonaaron/jquery-mousewheel" target="_blank">jQuery的鼠标滚轮插件</a></li>
+</ul>
+</li>
+</ul>
+<h2>License</h2>
+			<p itemprop="license"><strong>这项工作是在释放 <a rel="license" href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a></strong>. <br />您可以自由使用，研究，完善和修改的地方和你喜欢的.</strong> <br />
+			<a rel="license" href="http://opensource.org/licenses/MIT" target="_blank">http://opensource.org/licenses/MIT</a> </p>
+			<p class="donate">捐赠有助于大大制定和更新免费的软件，并运行此博客 🙂</p>
+			<div class="donate-link">
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="S9GGW9ZSSRS8G">
+					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+				</form>
+			</div>
+						</div>
+						<p class="paging">Pages:  <span>1</span> <a href="http://manos.malihu.gr/jquery-custom-content-scroller/2/"><span>2</span></a> <a href="http://manos.malihu.gr/jquery-custom-content-scroller/3/"><span>3</span></a> <a href="http://manos.malihu.gr/jquery-custom-content-scroller/4/"><span>4</span></a></p>						<hr />
+						<div class="article-extras">
+							<div class="article-tags">
+								<h3>Tags</h3><p><a href="http://manos.malihu.gr/tag/jquery/" rel="tag">jquery</a></p>							</div>
+															<div class="related-articles">
+									<h2>本文相关文章</h2>
+									<p>
+										<a href='
+http://manos.malihu.gr/add-a-custom-scrollbar-to-your-twitter-widget/'>一个自定义的滚动条添加到你的Twitter小工具</a> <a href='
+http://manos.malihu.gr/code-example/responsive-custom-scrollbar-with-css3-media-queries/'>与CSS3媒体查询响应定制的滚动条</a> <a href='
+http://manos.malihu.gr/code-example/scroll-to-id-within-element-with-custom-scrollbars/'>元素中滚动到ID自定义滚动条（S）</a> <a href='
+http://manos.malihu.gr/code-example/horizontal-custom-scrollbar-tutorial/'>水平滚动条定制教程</a> 									</p>
+								</div>
+													</div>
+					</article>
+					<div class="articles-nav clearfix">
+						<a href="http://manos.malihu.gr/jquery-thumbnail-scroller/" rel="prev">jQuery的缩略图滚动</a><a href="http://manos.malihu.gr/jquery-image-panning/" rel="next">jQuery image panning</a>					</div>
+												 <section id="comments">
+	<h2 itemprop="commentCount">5,340 注释 <a href="http://manos.malihu.gr/jquery-custom-content-scroller/feed/" target="_blank" title="Comments feed" class="gen-icon social-comments-rss"><span><svg version="1.1" viewBox="0 0 32 32" preserveAspectRatio="xMinYMin meet"><g></g><path d="M4.259 23.467c-2.35 0-4.259 1.917-4.259 4.252 0 2.349 1.909 4.244 4.259 4.244 2.358 0 4.265-1.895 4.265-4.244-0-2.336-1.907-4.252-4.265-4.252zM0.005 10.873v6.133c3.993 0 7.749 1.562 10.577 4.391 2.825 2.822 4.384 6.595 4.384 10.603h6.16c-0-11.651-9.478-21.127-21.121-21.127zM0.012 0v6.136c14.243 0 25.836 11.604 25.836 25.864h6.152c0-17.64-14.352-32-31.988-32z"></path></svg></span></a></h2>
+	<a href="#respond" class="post-comment">发表评论</a>
+	
+	
+	
+			<p class="paging">评论页面: <a class="prev page-numbers" href="http://manos.malihu.gr/jquery-custom-content-scroller/comment-page-77/#comments">Previous</a>
+<a class='page-numbers' href='http://manos.malihu.gr/jquery-custom-content-scroller/comment-page-1/#comments'>1</a>
+<span class="page-numbers dots">&hellip;</span>
+<a class='page-numbers' href='http://manos.malihu.gr/jquery-custom-content-scroller/comment-page-76/#comments'>76</a>
+<a class='page-numbers' href='http://manos.malihu.gr/jquery-custom-content-scroller/comment-page-77/#comments'>77</a>
+<span class='page-numbers current'>78</span></p>
+		<ol class="commentlist">
+			<li class="comment even thread-even depth-1" id="li-comment-21239" itemprop="comment">
+		<div class="comment-container clearfix">
+			<span class="avatar" data-src-url="http://manos.malihu.gr/wp-content/glc_cache/5fc9210d2f68c4abd973a967f75bc468-96.jpg"></span>
+			<span class="author"><a href='http://www.tribu.it' rel='external nofollow' class='url'>Gabriele</a></span>
+			<div class="comment-meta"><span class="date">发表于2016年9月21日在 21:21</span> <a href="http://manos.malihu.gr/jquery-custom-content-scroller/comment-page-78/#comment-21239" title="Permalink to this comment">Permalink</a> </div>
+			  
+			<div class="comment-content" id="comment-21239">
+				<p>Hello Malihu,<br />
+我想你的伟大插件我的新闻网站。我创建了一个箱子，在自动滚动的作品。他停在鼠标悬停并恢复鼠标离开。到目前为止，这是完美的。我想早点进入超时，以便有时间滚动开始之前读的第一消息，但我不能。无论我插入超时或根本不工作或滚动没有参与。附上我的脚本。如果你能帮助我，我真的会很高兴. Thank you.</p>
+<p><code>
+&lt;!DOCTYPE html&gt;
+&lt;!--[if IE 8 ]&gt;&lt;html lang=&quot;en&quot; class=&quot;ie8&quot;&gt;&lt;![endif]--&gt;
+&lt;!--[if IE 9 ]&gt;&lt;html lang=&quot;en&quot; class=&quot;ie9&quot;&gt;&lt;![endif]--&gt;
+&lt;!--[if (gt IE 9)|!(IE)]&gt;&lt;!--&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;!--&lt;![endif]--&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot; /&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+  &lt;title&gt;jQuery custom scrollbar demo&lt;/title&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
+  &lt;!-- stylesheet for demo and examples --&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+  &lt;!--[if lt IE 9]&gt;
+  &lt;script src=&quot;http://html5shiv.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js&quot;&gt;&lt;/script&gt;
+  &lt;![endif]--&gt;
+  
+  &lt;!-- 自定义样式表的滚动条 --&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;../jquery.mCustomScrollbar.css&quot;&gt;
+  
+&lt;/head&gt;
+
+&lt;body&gt;
+  
+    
+      &lt;!-- content --&gt;
+      &lt;div id=&quot;content-1&quot; class=&quot;content&quot;&gt;
+        &lt;p&gt;Lorem存有悲坐阿梅德，consectetur adipisicing ELIT，sed的根本eiusmod tempor incididunt UT labore等dolore麦格纳aliqua。UT enim广告微量veniam，QUIS nostrud实习ullamco laboris暂准UT aliquip前EA commodo consequat.&lt;/p&gt; 
+        &lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+        &lt;p&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.&lt;/p&gt; 
+        &lt;p&gt;Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.&lt;/p&gt; 
+        &lt;p&gt;Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?&lt;/p&gt; 
+        &lt;p&gt;Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?&lt;/p&gt;
+        &lt;p&gt;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.&lt;/p&gt; 
+        &lt;p&gt;Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.&lt;/p&gt; 
+        &lt;p&gt;Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.&lt;/p&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt; 
+        &lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+        &lt;p&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.&lt;/p&gt; 
+        &lt;p&gt;Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.&lt;/p&gt; 
+        &lt;p&gt;Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?&lt;/p&gt; 
+        &lt;p&gt;Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?&lt;/p&gt;
+        &lt;p&gt;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.&lt;/p&gt; 
+        &lt;p&gt;Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.&lt;/p&gt; 
+        &lt;p&gt;Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.&lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;End of content.&lt;/p&gt;
+  
+      &lt;/div&gt;
+&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;window.jQuery || document.write(&#039;&lt;script src=&quot;../js/minified/jquery-1.11.0.min.js&quot;&gt;&lt;\/script&gt;&#039;)&lt;/script&gt;
+  
+  &lt;!-- custom scrollbar plugin --&gt;
+  &lt;script src=&quot;../jquery.mCustomScrollbar.concat.min.js&quot;&gt;&lt;/script&gt;
+   
+  &lt;script&gt;
+    (function($){
+      $(window).load(function(){
+        var content=$(&quot;#content-1&quot;),autoScrollTimer=20000,autoScrollTimerAdjust,autoScroll;
+        
+        content.mCustomScrollbar({
+          scrollButtons:{enable:true},
+          callbacks:{
+            whileScrolling:function(){
+              autoScrollTimerAdjust=autoScrollTimer;
+            },
+            onScroll:function(){ 
+              if($(this).data(&quot;mCS&quot;).trigger===&quot;internal&quot;){AutoScrollOff();}
+            }
+          }
+        });
+            
+        content.addClass(&quot;auto-scrolling-on auto-scrolling-to-bottom&quot;);
+        AutoScrollOn(&quot;bottom&quot;);
+  
+              
+    $(&quot;#content-1&quot;).mouseenter(function(e){
+          e.preventDefault();
+          if(content.hasClass(&quot;auto-scrolling-on&quot;)){
+            AutoScrollOff();
+          }
+        });
+        $(&quot;#content-1&quot;).mouseleave(function(){
+          
+            AutoScrollOn(&quot;bottom&quot;,autoScrollTimer-autoScrollTimerAdjust);
+
+        });
+
+        function AutoScrollOn(to,timer){
+          if(!timer){timer=autoScrollTimer;}
+          content.addClass(&quot;auto-scrolling-on&quot;).mCustomScrollbar(&quot;scrollTo&quot;,to,{scrollInertia:timer,scrollEasing:&quot;linear&quot;});
+          autoScroll=setTimeout(function(){
+          },timer);
+        }
+        
+        function AutoScrollOff(){
+          clearTimeout(autoScroll);
+          content.removeClass(&quot;auto-scrolling-on&quot;).mCustomScrollbar(&quot;stop&quot;);
+        }
+        
+        
+      });
+    })(jQuery);
+  &lt;/script&gt;
+</code></p>
+<a rel='nofollow' class='comment-reply-link' href='http://manos.malihu.gr/jquery-custom-content-scroller/?replytocom=21239#respond' onclick='return addComment.moveForm( "comment-21239", "21239", "respond", "197" )' aria-label='Reply to Gabriele'>Reply</a>			</div>
+		</div>
+<ul class="children">
+	<li class="comment odd alt depth-2" id="li-comment-21240" itemprop="comment">
+		<div class="comment-container clearfix">
+			<span class="avatar" data-src-url="http://manos.malihu.gr/wp-content/glc_cache/5fc9210d2f68c4abd973a967f75bc468-96.jpg"></span>
+			<span class="author"><a href='http://www.tribu.it' rel='external nofollow' class='url'>GABRIELE</a></span>
+			<div class="comment-meta"><span class="date">Posted on September 22, 2016 at 13:57</span> <a href="http://manos.malihu.gr/jquery-custom-content-scroller/comment-page-78/#comment-21240" title="Permalink to this comment">Permalink</a> </div>
+			  
+			<div class="comment-content" id="comment-21240">
+				<p>Solved. If you are interested in sending you the code. Also because this example there is in your demo. But I not if even if you saw this post, so expect you to tell me if you are interested or not. Ciao amico mio. 🙂</p>
+<a rel='nofollow' class='comment-reply-link' href='http://manos.malihu.gr/jquery-custom-content-scroller/?replytocom=21240#respond' onclick='return addComment.moveForm( "comment-21240", "21240", "respond", "197" )' aria-label='Reply to GABRIELE'>Reply</a>			</div>
+		</div>
+<ul class="children">
+	<li class="comment byuser comment-author-admin bypostauthor even depth-3" id="li-comment-21241" itemprop="comment">
+		<div class="comment-container clearfix">
+			<span class="avatar" data-src-url="http://manos.malihu.gr/wp-content/glc_cache/ae673d5f6653ea05e883816014027b76-96.jpg"></span>
+			<span class="author">malihu</span>
+			<div class="comment-meta"><span class="date">Posted on September 23, 2016 at 11:30</span> <a href="http://manos.malihu.gr/jquery-custom-content-scroller/comment-page-78/#comment-21241" title="Permalink to this comment">Permalink</a> </div>
+			  
+			<div class="comment-content" id="comment-21241">
+				<p>Yes I saw it. Send me your solution if you like. Did you used plugin&#8217;s <em>onInit</em> callback or something else?</p>
+<a rel='nofollow' class='comment-reply-link' href='http://manos.malihu.gr/jquery-custom-content-scroller/?replytocom=21241#respond' onclick='return addComment.moveForm( "comment-21241", "21241", "respond", "197" )' aria-label='Reply to malihu'>Reply</a>			</div>
+		</div>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	</ol>
+			<p class="paging">Comments pages: <a class="prev page-numbers" href="http://manos.malihu.gr/jquery-custom-content-scroller/comment-page-77/#comments">Previous</a>
+<a class='page-numbers' href='http://manos.malihu.gr/jquery-custom-content-scroller/comment-page-1/#comments'>1</a>
+<span class="page-numbers dots">&hellip;</span>
+<a class='page-numbers' href='http://manos.malihu.gr/jquery-custom-content-scroller/comment-page-76/#comments'>76</a>
+<a class='page-numbers' href='http://manos.malihu.gr/jquery-custom-content-scroller/comment-page-77/#comments'>77</a>
+<span class='page-numbers current'>78</span></p>
+	 	<div id="respond">
+		<h2><span class="post-a-comment"><span><svg version="1.1" viewBox="0 0 32 32" preserveAspectRatio="xMinYMin meet"><g></g><path d="M27 0c2.761 0 5 2.239 5 5 0 1.126-0.372 2.164-1 3l-2 2-7-7 2-2c0.836-0.628 1.874-1 3-1zM2 23l-2 9 9-2 18.5-18.5-7-7-18.5 18.5zM22.362 11.362l-14 14-1.724-1.724 14-14 1.724 1.724z" fill="#444444"></path></svg></span></span> Post a comment</h2>
+		<a rel="nofollow" id="cancel-comment-reply-link" href="/jquery-custom-content-scroller/#respond" style="display:none;">Cancel reply</a>					<form action="http://manos.malihu.gr/wp-comments-post.php" method="post" id="commentform" class="clearfix">
+							<p>Your e-mail is <strong>never</strong> published nor shared. Required fields are marked <span class="asterisc">*</span></p>
+				<p><input type="text" name="author" id="author" tabindex="1" /> <label for="name">Name <span class="asterisc">*</span></label></p>
+				<p><input type="email" name="email" id="email" title="Your e-mail is never published nor shared" tabindex="2" /> <label for="email">E-mail <span class="asterisc">*</span></label></p>
+				<p><input type="url" name="url" id="url" tabindex="3" /> <label for="name">Website</label></p>
+							<p><label for="comment">Comment</label>
+				<textarea name="comment" id="comment" tabindex="4" placeholder="Post code (html, css, js etc.), using the code tag: &lt;code&gt;your code here...&lt;/code&gt; (see info below)"></textarea>
+				<span class="allowed-tags"><em>You may use these HTML tags and attributes:</em><br /> 
+				&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;strike&gt; &lt;strong&gt;<br />
+				<em>You can write or copy/paste code directly in your comment using the</em> &lt;code&gt; <em>tag: </em><br />
+				&lt;code&gt;code here...&lt;/code&gt;<br />
+				<em>You may also use the</em> data-lang <em>attribute to determine the code language like so:</em> <br />
+				&lt;code data-lang-html&gt;, &lt;code data-lang-css&gt;, &lt;code data-lang-js&gt; and &lt;code data-lang-php&gt;</span></p>
+				<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="48d9d5c15e" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="31"/></p>				<p><input type="submit" name="submit" id="submit" value="Post comment" tabindex="6" /></p>
+				<input type='hidden' name='comment_post_ID' value='197' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+			</form>
+			</div>
+</section>			</div>
+		</section>
+				<aside itemscope itemtype="http://schema.org/WPSideBar">
+							<div class="aside-section">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<!-- Sidebar top ad 3 -->
+					<ins class="adsbygoogle"
+					     style="display:inline-block;width:336px;height:280px"
+					     data-ad-client="ca-pub-2489642366368969"
+					     data-ad-slot="3193548331"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+				
+				<div class="aside-section mdb-placeholder clearfix"> 
+					<div id="md-large-widget"></div>
+					<script type="text/javascript">
+					(function() {
+					var mdWidgetUrl = "http://www.mightydeals.com/widgets/large/refID/164c173a/width/336/no_timer/1/rotate/1";
+					var s = document.createElement("script"), s1 = document.getElementsByTagName("script")[0];
+					s.type = "text/javascript";
+					s.async = true;
+					s.src = mdWidgetUrl;
+					s1.parentNode.insertBefore(s, s1);
+					})();
+					</script>
+				</div>
+			
+				<div class="aside-section clearfix"> 
+					<a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=36986_0_1_3" target="_blank" rel="nofollow" style="margin-right:10px;"><img style="border:0px" src="http://www.elegantthemes.com/affiliates/media/banners/125x125-2.gif" width="125" height="125" alt=""></a><a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=36986_5_1_17" target="_blank" rel="nofollow"><img style="border:0px" src="http://www.elegantthemes.com/affiliates/media/banners/200x125.jpg" width="200" height="125" alt="Divi WordPress Theme"></a>
+					<!--<a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=36986_0_1_3" target="_blank" rel="nofollow" style="display:inline-block;margin-right:10px;width:125px;height:125px;background:url(http://manos.malihu.gr/wp-content/themes/malihu/images/et125125-2.gif) no-repeat center;"><img style="border:0px" src="http://www.elegantthemes.com/affiliates/media/banners/125x125-2.gif" width="125" height="125" alt=""></a><a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=36986_5_1_17" target="_blank" rel="nofollow" style="display:inline-block;width:200px;height:125px;background:url(http://manos.malihu.gr/wp-content/themes/malihu/images/et200125.jpg) no-repeat center;"><img style="border:0px" src="http://www.elegantthemes.com/affiliates/media/banners/200x125.jpg" width="200" height="125" alt="Divi WordPress Theme"></a>-->
+				</div>
+			
+				<div class="aside-section clearfix"> 
+					<a href="https://secure1.inmotionhosting.com/cgi-bin/gby/clickthru.cgi?id=malihu&page=3&campaign=featured_link" class="aside-ad-link" target="_blank"><em>WordPress-Optimized</em> Web Hosting by InMotion Hosting at <em>$5.99/mo</em></a> 
+					All the features you need including, getting it pre-installed by a technical expert, SSD drives, auto-updates, free backups and WP-CLI integration.
+				</div>
+			
+				<div class="aside-section clearfix"> 
+					<a href="https://bundlehunt.com/?ap_id=malihu" class="m-custom-ad" target="_blank"><img src="http://manos.malihu.gr/wp-content/themes/malihu/images/bundlehunt-logo.png" /> 
+					<h4>Create your Mac bundle</h4> 
+					<span>Choose the Mac apps you like for <em>one low price!</em> Unbelievable discounts for Mac users, creative professionals and web designers.</span></a>
+				</div>
+						
+			<div class="aside-section">
+				<span class="donate-message">Everything published here is free</span>
+				<h3>
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="hosted_button_id" value="S9GGW9ZSSRS8G">
+						<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+						<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+					</form> 
+					and be Awesome. 
+				</h3> 
+				<p>Did you find something useful that saved you time and effort? Did I somehow helped you make a great site? <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=UYJ5G65M6ZA28" target="_blank">Donate</a> and help keep software free and up-to-date :)</p>
+			</div>
+			
+							<div class="aside-section">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<!-- Sidebar long ad -->
+					<ins class="adsbygoogle"
+					     style="display:inline-block;width:300px;height:600px"
+					     data-ad-client="ca-pub-2489642366368969"
+					     data-ad-slot="6178124735"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+						
+					</aside>	</section>
+	<footer itemscope itemtype="http://schema.org/WPFooter">
+		<div class="content">
+			<div class="footer-section about contact">
+				<p><a href="http://manos.malihu.gr/about" title="About me">Manos Malihutsakis</a> blog. Creating and sharing (completely free) all kinds of web stuff. 
+									<br /><a href="http://manos.malihu.gr/contact">Contact me</a> at <span class="address"></span>.</p>
+							</div>
+			<p>The work published on this blog is licensed under the <a rel="license" href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a>. Like to help? <a href="https://github.com/malihu/" target="_blank">contribute code on Github</a> or <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UYJ5G65M6ZA28" target="_blank">make a donation</a> :)</p>
+			<blockquote cite="http://www.gnu.org/philosophy/free-sw.html">&laquo;Free software&raquo; means software that respects users' freedom and community. Roughly, the users have the freedom to run, copy, distribute, study, change and improve the software. With these freedoms, the users (both individually and collectively) control the program and what it does for them. <span class="quote-source">&mdash; GNU, <em>The Free Software Definition</em></span></blockquote>
+			<a href="#top" class="back-to-top"><span><svg version="1.1" viewBox="0 0 24 24" preserveAspectRatio="xMinYMin meet"><g></g><path d="M20.561 9.439l-7.5-7.5c-0.586-0.586-1.535-0.586-2.121 0l-7.5 7.5c-0.586 0.586-0.586 1.536 0 2.121s1.536 0.586 2.121 0l4.939-4.939v14.379c0 0.828 0.672 1.5 1.5 1.5s1.5-0.672 1.5-1.5v-14.379l4.939 4.939c0.293 0.293 0.677 0.439 1.061 0.439s0.768-0.146 1.061-0.439c0.586-0.586 0.586-1.535 0-2.121z"></path></svg></span></a>
+		</div>
+	</footer>
+	<img alt='css.php' src="http://manos.malihu.gr/wp-content/plugins/cookies-for-comments/css.php?k=0e9dc04a18459b158cda1f04dcf3e422&amp;o=i&amp;t=1639209949" width='1' height='1' /><script type='text/javascript' src='http://manos.malihu.gr/wp-content/plugins/akismet/_inc/form.js?ver=3.2'></script>
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script type='text/javascript' src='http://manos.malihu.gr/wp-content/themes/malihu/js/custom.min.js'></script>
+<script type='text/javascript' src='http://manos.malihu.gr/wp-includes/js/comment-reply.min.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://manos.malihu.gr/wp-includes/js/wp-embed.min.js?ver=4.6.1'></script>
+	
+	<!-- analytics -->
+		<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-17514026-3']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	</script>
+		
+	<script>
+		(function($){ 
+			$(document).ready(function(){
+				if(!localStorage.getItem("malihu-cookies")){
+					$("#malihu-cookies").css("display","block");
+				}
+				$("#malihu-cookies-accept").click(function(e){
+					e.preventDefault();
+					$("#malihu-cookies").css("display","none");
+					localStorage.setItem("malihu-cookies", "true");
+				});
+				//faq filter test
+				var filterform=$("#filterform"),filterinput=$("#filterinput"),delay;
+				filterform.submit(function(e){
+					e.preventDefault();
+				});
+				filterinput.on("change search",function(){
+					var filter=$(this).val();
+					if(delay){
+						clearTimeout(delay);
+						delay=null;
+					}
+					delay=setTimeout(function(){
+						if(filter){
+							if(filter.replace(/\s/g, "").length>2){
+								var matches=$("._faq").find("._q:icontains("+filter+")").parent();
+								$("._faq","._faq-list").not(matches).css("display","none");
+								matches.css("display","block");
+							}
+						}else{
+							$("._faq").css("display","block");
+						}
+					},500);
+				}).keyup(function(){
+					$(this).trigger("change");
+				});
+				$.expr[":"].icontains=$.expr.createPseudo(function(arg){
+				    return function(elem){
+				        return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+				    };
+				});
+				//comments code 
+				$(".comment-content code[data-lang-html]").addClass("language-markup");
+				$(".comment-content code[data-lang-css]").addClass("language-css");
+				$(".comment-content code[data-lang-js]").addClass("language-javascript");
+				$(".comment-content code[data-lang-php]").addClass("language-php");
+				$(".comment-content code:not([class])").addClass("language-clike");
+			});
+			$(window).load(function(){
+				//adsense ad-block detection and message
+				setTimeout(function(){
+					var testad=$(".aside-section:first .adsbygoogle"),
+						testad2=$(".aside-section.mdb-placeholder > div"),
+						testad3=$("article .links-ad .adsbygoogle");
+					if(testad.length && !testad.html().length){
+						testad.after("<p id='ads-blocked-message' style='font-size:17px;line-height:24px;color:#eb3755;'><b>Hey!</b> If you're using <em>ad-block</em> software, please consider disabling it for this website. Thanks :)</p><p><a href='http://www.mightydeals.com?refID=164c173a' target='_blank'><img src='"+templateURL+"/images/mdb8.jpg' /></a></p><p><a href='http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=36986_5_1_18' target='_blank' rel='nofollow' style='display:block;width:300px;height:250px;background:url("+templateURL+"/images/etd300250.jpg) no-repeat center;'><img style='border:0px' src='"+templateURL+"/images/divi_300x250.jpg' width='300' height='250' alt='Divi WordPress Theme'></a></p>");
+					}
+					if(testad2.length && !testad2.html().length){
+						testad2.parent(".mdb-placeholder").addClass("blocked");
+					}
+					if(testad3.length && !testad3.html().length){
+						//get item from md feed
+						var apiUrl="//ajax.googleapis.com/ajax/services/feed/load?v=1.0&output=json&callback=?&q=http://www.mightydeals.com/rss?refID=164c173a";
+						$.getJSON(apiUrl,function(data){
+							var entries=data.responseData.feed.entries;
+							/*for(var i=0; i<3; i++){
+								console.log(entries[i].title,entries[i].link);
+							}*/
+							testad3.after("<p><a href='"+entries[0].link+"' target='_blank' class='md-link-ad'>"+entries[0].title+"</a> <a href='"+entries[1].link+"' target='_blank' class='md-link-ad'>"+entries[1].title+"</a></p>");
+						});
+					}
+				},500);
+			});
+		})(jQuery);
+	</script>
+	
+	</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk
+
+ Served from: manos.malihu.gr @ 2016-09-26 07:16:14 by W3 Total Cache -->
