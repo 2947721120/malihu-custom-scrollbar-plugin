@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -277,7 +278,7 @@ Updated <a href="http://manos.malihu.gr/jquery-thumbnail-scroller/">Thumbnail sc
 <p>Current version <strong itemprop="version">3.1.5</strong> (<a href="http://manos.malihu.gr/jquery-custom-content-scroller/2/">Changelog</a>)<br />
 <a href="#expand-info">从版本升级 2</a> <meta itemprop="dateModified" content="2016-7-11"/></p>
 <div class="expand-info">
-当从版本升级 <a href="https://github.com/malihu/malihu-custom-scrollbar-plugin/tree/2.x" target="_blank">2.x</a> to <a href="https://github.com/malihu/malihu-custom-scrollbar-plugin/tree/3.x" target="_blank">3.x</a> it&#8217;s 使用3版本的CSS和PNG文件的重要。3版本是向后兼容的，它与# 8217；也是一个巨大的改革。一个明显的变化是，你不# 8217；不需要调用 <em>update</em>方法手动（脚本自动完成）。更多信息见<a href="http://manos.malihu.gr/jquery-custom-content-scroller/2/">changelog</a>. </p>
+When upgrading from version <a href="https://github.com/malihu/malihu-custom-scrollbar-plugin/tree/2.x" target="_blank">2.x</a> to <a href="https://github.com/malihu/malihu-custom-scrollbar-plugin/tree/3.x" target="_blank">3.x</a> it&#8217;s 使用3版本的CSS和PNG文件的重要。3版本是向后兼容的，它与# 8217；也是一个巨大的改革。一个明显的变化是，你不# 8217；不需要调用 <em>update</em>方法手动（脚本自动完成）。更多信息见<a href="http://manos.malihu.gr/jquery-custom-content-scroller/2/">changelog</a>. </p>
 <p>版本2仍然保持<del>and updated</del> <a href="https://github.com/malihu/malihu-custom-scrollbar-plugin/tree/2.x" target="_blank">here</a>.</p>
 <hr />
 </div>
@@ -296,7 +297,7 @@ Updated <a href="http://manos.malihu.gr/jquery-thumbnail-scroller/">Thumbnail sc
 <div class="expand-info">
 而不是主机插件的文件在您的Web服务器，你可以直接从CDN负载等 <a href="http://www.jsdelivr.com/" target="_blank">jsdelivr</a>,GitHub等.</p>
 <ul>
-<li><strong>jsdelivr</strong>版本/精缩
+<li><strong>jsdelivr</strong> versioned/minified
 <ul>
 <li>//cdn.c2cbc.com/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.concat.min.js</li>
 <li>//cdn.c2cbc.com/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css</li>
@@ -460,7 +461,7 @@ $(&quot;.content&quot;).mCustomScrollbar({
 <dt><pre data-language=&#8221;javascript&#8221;>scrollbarPosition: &quot;string&quot;</pre></dt>
 <dd>设置有关内容滚动条的位置.<br />
 	可利用的价值: <code>&quot;inside&quot;</code>, <code>&quot;outside&quot;</code>.<br />
-	设置<code>scrollbarPosition: &quot;inside&quot;</code>（默认）使滚动条出现在元。设置 <code>scrollbarPosition: &quot;outside&quot;</code> 使滚动条出现在元。请注意，将值设置为 <code>&quot;outside&quot;</code> 需要你的元素（或父元素）有CSS <code>position: relative</code> （否则滚动条将被定位在相对于文档的根元素）. </dd>
+	Setting <code>scrollbarPosition: &quot;inside&quot;</code>（默认）使滚动条出现在元。设置 <code>scrollbarPosition: &quot;outside&quot;</code> 使滚动条出现在元。请注意，将值设置为 <code>&quot;outside&quot;</code> 需要你的元素（或父元素）有CSS <code>position: relative</code> （否则滚动条将被定位在相对于文档的根元素）. </dd>
 </dl>
 <dl id="plugin-data-scrollInertia">
 <dt><pre data-language=&#8221;javascript&#8221;>scrollInertia: integer</pre></dt>
@@ -486,9 +487,9 @@ $(&quot;.content&quot;).mCustomScrollbar({
 <dt><pre data-language=&#8221;javascript&#8221;>alwaysShowScrollbar: integer</pre></dt>
 <dd>始终保持滚动条可见，即使没有什么滚动. </p>
 <ul>
-<li><code>alwaysShowScrollbar: 0</code> &#8211; 禁用（默认）</li>
-<li><code>alwaysShowScrollbar: 1</code> &#8211; 保持牵引机轨可见</li>
-<li><code>alwaysShowScrollbar: 2</code> &#8211; 保持所有组件滚动条（匕首，铁路，按钮等）可见</li>
+<li><code>alwaysShowScrollbar: 0</code> &#8211; disable (default)</li>
+<li><code>alwaysShowScrollbar: 1</code> &#8211; keep dragger rail visible</li>
+<li><code>alwaysShowScrollbar: 2</code> &#8211; keep all scrollbar components (dragger, rail, buttons etc.) visible</li>
 </ul>
 </dd>
 </dl>
@@ -503,49 +504,49 @@ $(&quot;.content&quot;).mCustomScrollbar({
 </dl>
 <dl id="plugin-data-mouseWheel-enable">
 <dt><pre data-language=&#8221;javascript&#8221;>mouseWheel:{ enable: boolean }</pre></dt>
-<dd>启用或禁用内容滚动通过鼠标滚轮.</dd>
+<dd>Enable or disable content scrolling via mouse-wheel.</dd>
 </dl>
 <dl id="plugin-data-mouseWheel-scrollAmount">
 <dt><pre data-language=&#8221;javascript&#8221;>mouseWheel:{ scrollAmount: integer }</pre></dt>
-<dd>设置鼠标滚轮滚动量（以像素为单位）。默认值 <code>&quot;auto&quot;</code> 调整滚动量根据滚动内容长度.</dd>
+<dd>Set the mouse-wheel scrolling amount (in pixels). The default value <code>&quot;auto&quot;</code> adjusts scrolling amount according to scrollable content length.</dd>
 </dl>
 <dl id="plugin-data-mouseWheel-axis">
 <dt><pre data-language=&#8221;javascript&#8221;>mouseWheel:{ axis: &quot;string&quot; }</pre></dt>
-<dd>定义鼠标滚轮滚动轴在垂直和水平滚动条的存在.<br />
-	设置<code>axis: &quot;y&quot;</code>（默认）垂直或<code>axis: &quot;x&quot;</code>水平滚动.</dd>
+<dd>Define the mouse-wheel scrolling axis when both vertical and horizontal scrollbars are present.<br />
+		Set <code>axis: &quot;y&quot;</code> (default) for vertical or <code>axis: &quot;x&quot;</code> for horizontal scrolling.</dd>
 </dl>
 <dl id="plugin-data-mouseWheel-preventDefault">
-<dt><pre data-language=&#8221;javascript&#8221;>mouseWheel:{ prevent>查看示例< boolean }</pre></dt>
-<dd>防止自动滚动到达终点或滚动开始的时候父元素（相同的行为与浏览器的原生滚动条）的默认行为.</dd>
+<dt><pre data-language=&#8221;javascript&#8221;>mouseWheel:{ preventDefault: boolean }</pre></dt>
+<dd>Prevent the default behaviour which automatically scrolls the parent element when end or beginning of scrolling is reached (same bahavior with browser&#8217;s native scrollbar).</dd>
 </dl>
 <dl id="plugin-data-mouseWheel-deltaFactor">
 <dt><pre data-language=&#8221;javascript&#8221;>mouseWheel:{ deltaFactor: integer }</pre></dt>
-<dd>设置像素的一个车轮槽口卷轴的数目。默认值为“自动”使用OS /浏览器的价值.</dd>
+<dd>Set the number of pixels one wheel notch scrolls. The default value &#8220;auto&#8221; uses the OS/browser value.</dd>
 </dl>
 <dl id="plugin-data-mouseWheel-normalizeDelta">
 <dt><pre data-language=&#8221;javascript&#8221;>mouseWheel:{ normalizeDelta: boolean }</pre></dt>
-<dd>启用或禁用鼠标滚轮（增量）加速。 设置<code>normalizeDelta: true</code>转换鼠标滚轮差值为-1或1.</dd>
+<dd>Enable or disable mouse-wheel (delta) acceleration. Setting <code>normalizeDelta: true</code> translates mouse-wheel delta value to -1 or 1.</dd>
 </dl>
 <dl id="plugin-data-mouseWheel-invert">
 <dt><pre data-language=&#8221;javascript&#8221;>mouseWheel:{ invert: boolean }</pre></dt>
-<dd>反转鼠标滚轮滚动的方向。 设置 <code>true</code> 向下或向右时，鼠标滚轮打开向上滚动.</dd>
+<dd>Invert mouse-wheel scrolling direction. Set to <code>true</code> to scroll down or right when mouse-wheel is turned upwards.</dd>
 </dl>
 <dl id="plugin-data-mouseWheel-disableOver">
 <dt><pre data-language=&#8221;javascript&#8221;>mouseWheel:{ disableOver: [array] }</pre></dt>
-<dd>设置禁用鼠标滚轮的标签，当光标在他们.<br />
+<dd>Set the tags that disable mouse-wheel when cursor is over them.<br />
 		Default value: <pre data-language=&#8221;javascript&#8221;>[&quot;select&quot;,&quot;option&quot;,&quot;keygen&quot;,&quot;datalist&quot;,&quot;textarea&quot;]</pre></dd>
 </dl>
 <dl id="plugin-data-scrollButtons-enable">
 <dt><pre data-language=&#8221;javascript&#8221;>scrollButtons:{ enable: boolean }</pre></dt>
-<dd>启用或禁用滚动按钮.</dd>
+<dd>Enable or disable scrollbar buttons.</dd>
 </dl>
 <dl id="plugin-data-scrollButtons-scrollAmount">
 <dt><pre data-language=&#8221;javascript&#8221;>scrollButtons:{ scrollAmount: integer }</pre></dt>
-<dd>设置滚动量（以像素为单位）的按钮。的默认值 <code>&quot;auto&quot;</code>调整按滚动内容长度滚动量.</dd>
+<dd>Set the buttons scrolling amount (in pixels). The default value <code>&quot;auto&quot;</code> adjusts scrolling amount according to scrollable content length.</dd>
 </dl>
 <dl id="plugin-data-scrollButtons-scrollType">
 <dt><pre data-language=&#8221;javascript&#8221;>scrollButtons:{ scrollType: &quot;string&quot; }</pre></dt>
-<dd>定义按键滚动型/行为. </p>
+<dd>Define the buttons scrolling type/behavior. </p>
 <ul>
 <li><code>scrollType: &quot;stepless&quot;</code> &#8211; continuously scroll content while pressing the button (default)</li>
 <li><code>scrollType: &quot;stepped&quot;</code> &#8211; each button click scrolls content by a certain amount (defined in scrollAmount option above)</li>
@@ -554,35 +555,35 @@ $(&quot;.content&quot;).mCustomScrollbar({
 </dl>
 <dl id="plugin-data-scrollButtons-tabindex">
 <dt><pre data-language=&#8221;javascript&#8221;>scrollButtons:{ tabindex: integer }</pre></dt>
-<dd>设置按钮一个tabIndex值. </dd>
+<dd>Set a tabindex value for the buttons. </dd>
 </dl>
 <dl id="plugin-data-keyboard-enable">
 <dt><pre data-language=&#8221;javascript&#8221;>keyboard:{ enable: boolean }</pre></dt>
-<dd>启用或通过键盘禁用内容滚动.<br />
-		该插件支持的方向箭头（前，左，右，下），向上翻页（PAGE UP），向下翻页（PgDn键），Home和End键. </dd>
+<dd>Enable or disable content scrolling via the keyboard.<br />
+		The plugin supports the directional arrows (top, left, right and down), page-up (PgUp), page-down (PgDn), Home and End keys. </dd>
 </dl>
 <dl id="plugin-data-keyboard-scrollAmount">
 <dt><pre data-language=&#8221;javascript&#8221;>keyboard:{ scrollAmount: integer }</pre></dt>
-<dd>设置键盘箭头滚动量（以像素为单位）。的默认值<code>&quot;auto&quot;</code>调整按滚动内容长度滚动量.</dd>
+<dd>Set the keyboard arrows scrolling amount (in pixels). The default value <code>&quot;auto&quot;</code> adjusts scrolling amount according to scrollable content length.</dd>
 </dl>
 <dl id="plugin-data-keyboard-scrollType">
 <dt><pre data-language=&#8221;javascript&#8221;>keyboard:{ scrollType: &quot;string&quot; }</pre></dt>
 <dd>Define the keyboard arrows scrolling type/behavior. </p>
 <ul>
-<li><code>scrollType: &quot;stepless&quot;</code> &#8211;连续滚动的内容，同时按箭头键（默认）</li>
-<li><code>scrollType: &quot;stepped&quot;</code> &#8211; 每个键释放卷轴由一定量的内容（在scrollAmount选项中定义如上）</li>
+<li><code>scrollType: &quot;stepless&quot;</code> &#8211; continuously scroll content while pressing the arrow key (default)</li>
+<li><code>scrollType: &quot;stepped&quot;</code> &#8211; each key release scrolls content by a certain amount (defined in scrollAmount option above)</li>
 </ul>
 </dd>
 </dl>
 <dl id="plugin-data-contentTouchScroll">
 <dt><pre data-language=&#8221;javascript&#8221;>contentTouchScroll: integer</pre></dt>
-<dd>启用或禁用内容触摸刷卡滚动的触摸功能的设备.<br />
-		要完全禁用，设置 <code>contentTouchScroll: false</code>.<br />
-		整数值定义滚动势头所需的特定轴的关联项目(默认: <code>25</code>).</dd>
+<dd>Enable or disable content touch-swipe scrolling for touch-enabled devices.<br />
+		To completely disable, set <code>contentTouchScroll: false</code>.<br />
+		Integer values define the axis-specific minimum amount required for scrolling momentum (default: <code>25</code>).</dd>
 </dl>
 <dl id="plugin-data-documentTouchScroll">
 <dt><pre data-language=&#8221;javascript&#8221;>documentTouchScroll: boolean</pre></dt>
-<dd>启用或禁用文件触摸刷卡滚动的触摸功能的设备.</dd>
+<dd>Enable or disable document touch-swipe scrolling for touch-enabled devices.</dd>
 </dl>
 <dl id="plugin-data-advanced-autoExpandHorizontalScroll">
 <dt><pre data-language=&#8221;javascript&#8221;>advanced:{ autoExpandHorizontalScroll: boolean }</pre></dt>
@@ -592,43 +593,44 @@ $(&quot;.content&quot;).mCustomScrollbar({
 </dl>
 <dl id="plugin-data-advanced-autoScrollOnFocus">
 <dt><pre data-language=&#8221;javascript&#8221;>advanced:{ autoScrollOnFocus: &quot;string&quot; }</pre></dt>
-<dd>设置将自动滚动内容，以他们的立场焦点时的元素/选择器列表.<br />
-		例如，按TAB键集中输入字段时，如果字段超出可视区域的内容将滚动到其顶部/左侧位置（相同的行为与浏览器的原生滚动条）.<br />
-		要完全禁用此功能，设置 <code>autoScrollOnFocus: false</code>.<br />
-		默认: <pre data-language=&#8221;javascript&#8221;>&quot;input,textarea,select,button,datalist,keygen,a[tabindex],area,object,[contenteditable=&#039;true&#039;]&quot;</pre></dd>
+<dd>Set the list of elements/selectors that will auto-scroll content to their position when focused.<br />
+		For example, when pressing TAB key to focus input fields, if the field is out of the viewable area the content will scroll to its top/left position (same bahavior with browser&#8217;s native scrollbar).<br />
+		To completely disable this functionality, set <code>autoScrollOnFocus: false</code>.<br />
+		Default: <pre data-language=&#8221;javascript&#8221;>&quot;input,textarea,select,button,datalist,keygen,a[tabindex],area,object,[contenteditable=&#039;true&#039;]&quot;</pre></dd>
 </dl>
 <dl id="plugin-data-advanced-updateOnContentResize">
 <dt><pre data-language=&#8221;javascript&#8221;>advanced:{ updateOnContentResize: boolean }</pre></dt>
-<dd>更新滚动条）自动内容，元素或调整大小视.<br />
-		The value should be <code>true</code> （默认）流体布局/元素，添加/移除动态内容，隐藏/显示元素等.</dd>
+<dd>Update scrollbar(s) automatically on content, element or viewport resize.<br />
+		The value should be <code>true</code> (default) for fluid layouts/elements, adding/removing content dynamically, hiding/showing elements etc.</dd>
 </dl>
 <dl id="plugin-data-advanced-updateOnImageLoad">
 <dt><pre data-language=&#8221;javascript&#8221;>advanced:{ updateOnImageLoad: boolean }</pre></dt>
-<dd>更新滚动条）自动每次元素中的图像是完全加载.<br />
-		Default value is <code>auto</code> which triggers the function only on <code>&quot;x&quot;</code> and <code>&quot;yx&quot;</code>轴（如需要）.<br />
+<dd>Update scrollbar(s) automatically each time an image inside the element is fully loaded.<br />
+		Default value is <code>auto</code> which triggers the function only on <code>&quot;x&quot;</code> and <code>&quot;yx&quot;</code> axis (if needed).<br />
 		The value should be <code>true</code> when your content contains images and you need the function to trigger on any axis.</dd>
 </dl>
 <dl id="plugin-data-advanced-updateOnSelectorChange">
 <dt><pre data-language=&#8221;javascript&#8221;>advanced:{ updateOnSelectorChange: &quot;string&quot; }</pre></dt>
-<dd>更新滚动条）时自动的特定选择改变的量和大小.<br />
-		有用的，当你需要自动更新的滚动条），类型元素的添加，删除或更改其大小各一次。<br/>例如，设置 <code>updateOnSelectorChange: &quot;ul li&quot;</code>将更新滚动条的每个元素中列表项被变更时.<br />
+<dd>Update scrollbar(s) automatically when the amount and size of specific selectors changes.<br />
+		Useful when you need to update the scrollbar(s) automatically, each time a type of element is added, removed or changes its size.<br />
+		For example, setting <code>updateOnSelectorChange: &quot;ul li&quot;</code> will update scrollbars each time list-items inside the element are changed.<br />
 		Setting the value to <code>true</code>, will update scrollbars each time any element is changed.<br />
 		To disable (default) set to <code>false</code>. </dd>
 </dl>
 <dl id="plugin-data-advanced-extraDraggableSelectors">
 <dt><pre data-language=&#8221;javascript&#8221;>advanced:{ extraDraggableSelectors: &quot;string&quot; }</pre></dt>
-<dd>添加额外的选择（s）表示，将释放滚动条在鼠标松开，pointerup，touchend等拖累.<br />
-		实例: <code>extraDraggableSelectors: &quot;.myClass, #myID&quot;</code> </dd>
+<dd>Add extra selector(s) that&#8217;ll release scrollbar dragging upon mouseup, pointerup, touchend etc.<br />
+		Example: <code>extraDraggableSelectors: &quot;.myClass, #myID&quot;</code> </dd>
 </dl>
 <dl id="plugin-data-advanced-releaseDraggableSelectors">
 <dt><pre data-language=&#8221;javascript&#8221;>advanced:{ releaseDraggableSelectors: &quot;string&quot; }</pre></dt>
-<dd>添加额外的选择（s）表示，将允许在滚动鼠标悬停/向上，pointermove/向上，touchend等拖累.<br />
-		实例: <code>releaseDraggableSelectors: &quot;.myClass, #myID&quot;</code> </dd>
+<dd>Add extra selector(s) that&#8217;ll allow scrollbar dragging upon mousemove/up, pointermove/up, touchend etc.<br />
+		Example: <code>releaseDraggableSelectors: &quot;.myClass, #myID&quot;</code> </dd>
 </dl>
 <dl id="plugin-data-advanced-autoUpdateTimeout">
 <dt><pre data-language=&#8221;javascript&#8221;>advanced:{ autoUpdateTimeout: integer }</pre></dt>
-<dd>设置以毫秒为单位的自动更新超时.<br />
-		默认的超时: <code>60</code> </dd>
+<dd>Set the auto-update timeout in milliseconds.<br />
+		Default timeout: <code>60</code> </dd>
 </dl>
 <dl id="plugin-data-theme">
 <dt><pre data-language=&#8221;javascript&#8221;>theme: &quot;string&quot;</pre></dt>
@@ -642,7 +644,7 @@ $(&quot;.content&quot;).mCustomScrollbar({
       onCreate: function(){}
 }</pre></dt>
 <dd>A function to call when plugin markup is created.<br />
-		实例: <br />
+		Example: <br />
 	<pre data-language=&#8221;javascript&#8221;>callbacks:{
     onCreate:function(){
       console.log(&quot;Plugin markup generated&quot;);
@@ -653,8 +655,8 @@ $(&quot;.content&quot;).mCustomScrollbar({
 <dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
       onInit: function(){}
 }</pre></dt>
-<dd>当滚动条已初始化调用的函数 (<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/callbacks_example.html" target="_blank">demo</a>).<br />
-		实例: <br />
+<dd>A function to call when scrollbars have initialized (<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/callbacks_example.html" target="_blank">demo</a>).<br />
+		Example: <br />
 	<pre data-language=&#8221;javascript&#8221;>callbacks:{
     onInit:function(){
       console.log(&quot;Scrollbars initialized&quot;);
@@ -666,7 +668,7 @@ $(&quot;.content&quot;).mCustomScrollbar({
       onScrollStart: function(){}
 }</pre></dt>
 <dd>A function to call when scrolling starts (<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/callbacks_example.html" target="_blank">demo</a>).<br />
-		实例: <br />
+		Example: <br />
 	<pre data-language=&#8221;javascript&#8221;>callbacks:{
     onScrollStart:function(){
       console.log(&quot;Scrolling started...&quot;);
@@ -677,8 +679,8 @@ $(&quot;.content&quot;).mCustomScrollbar({
 <dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
       onScroll: function(){}
 }</pre></dt>
-<dd>完成滚动时调用的函数 (<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/callbacks_example.html" target="_blank">demo</a>).<br />
-		实例: <br />
+<dd>A function to call when scrolling is completed (<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/callbacks_example.html" target="_blank">demo</a>).<br />
+		Example: <br />
 	<pre data-language=&#8221;javascript&#8221;>callbacks:{
     onScroll:function(){
       console.log(&quot;Content scrolled...&quot;);
@@ -689,8 +691,8 @@ $(&quot;.content&quot;).mCustomScrollbar({
 <dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
       whileScrolling: function(){}
 }</pre></dt>
-<dd>调用一个函数，而滚动活跃 (<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/callbacks_example.html" target="_blank">demo</a>).<br />
-		实例: <br />
+<dd>A function to call while scrolling is active (<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/callbacks_example.html" target="_blank">demo</a>).<br />
+		Example: <br />
 	<pre data-language=&#8221;javascript&#8221;>callbacks:{
     whileScrolling:function(){
       console.log(&quot;Scrolling...&quot;);
@@ -701,8 +703,8 @@ $(&quot;.content&quot;).mCustomScrollbar({
 <dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
       onTotalScroll: function(){}
 }</pre></dt>
-<dd>当滚动完成，内容滚动一路到最后调用函数（下/右） (<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/callbacks_example.html" target="_blank">demo</a>).<br />
-		实例: <br />
+<dd>A function to call when scrolling is completed and content is scrolled all the way to the end (bottom/right) (<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/callbacks_example.html" target="_blank">demo</a>).<br />
+		Example: <br />
 	<pre data-language=&#8221;javascript&#8221;>callbacks:{
     onTotalScroll:function(){
       console.log(&quot;Scrolled to end of content.&quot;);
@@ -714,7 +716,7 @@ $(&quot;.content&quot;).mCustomScrollbar({
       onTotalScrollBack: function(){}
 }</pre></dt>
 <dd>A function to call when scrolling is completed and content is scrolled back to the beginning (top/left) (<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/callbacks_example.html" target="_blank">demo</a>).<br />
-		实例: <br />
+		Example: <br />
 	<pre data-language=&#8221;javascript&#8221;>callbacks:{
     onTotalScrollBack:function(){
       console.log(&quot;Scrolled back to the beginning of content.&quot;);
@@ -725,14 +727,14 @@ $(&quot;.content&quot;).mCustomScrollbar({
 <dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
       onTotalScrollOffset: integer
 }</pre></dt>
-<dd>设置了onTotal滚动选项偏移.<br />
+<dd>Set an offset for the onTotalScroll option.<br />
 		For example, setting <code>onTotalScrollOffset: 100</code> will trigger the onTotalScroll callback 100 pixels before the end of scrolling is reached.</dd>
 </dl>
 <dl id="plugin-data-callbacks-onTotalScrollBackOffset">
 <dt><pre data-language=&#8221;javascript&#8221;>callbacks:{
       onTotalScrollBackOffset: integer
 }</pre></dt>
-<dd>设置总回滚选项偏移.<br />
+<dd>Set an offset for the onTotalScrollBack option.<br />
 		For example, setting <code>onTotalScrollBackOffset: 100</code> will trigger the onTotalScrollBack callback 100 pixels before the beginning of scrolling is reached.</dd>
 </dl>
 <dl id="plugin-data-callbacks-alwaysTriggerOffsets">
@@ -748,7 +750,7 @@ $(&quot;.content&quot;).mCustomScrollbar({
       onOverflowY: function(){}
 }</pre></dt>
 <dd>A function to call when content becomes long enough and vertical scrollbar is added.<br />
-		实例: <br />
+		Example: <br />
 	<pre data-language=&#8221;javascript&#8221;>callbacks:{
     onOverflowY:function(){
       console.log(&quot;Vertical scrolling required&quot;);
@@ -760,7 +762,7 @@ $(&quot;.content&quot;).mCustomScrollbar({
       onOverflowX: function(){}
 }</pre></dt>
 <dd>A function to call when content becomes wide enough and horizontal scrollbar is added.<br />
-		实例: <br />
+		Example: <br />
 	<pre data-language=&#8221;javascript&#8221;>callbacks:{
     onOverflowX:function(){
       console.log(&quot;Horizontal scrolling required&quot;);
@@ -772,7 +774,7 @@ $(&quot;.content&quot;).mCustomScrollbar({
       onOverflowYNone: function(){}
 }</pre></dt>
 <dd>A function to call when content becomes short enough and vertical scrollbar is removed.<br />
-		实例: <br />
+		Example: <br />
 	<pre data-language=&#8221;javascript&#8221;>callbacks:{
     onOverflowYNone:function(){
       console.log(&quot;Vertical scrolling is not required&quot;);
@@ -784,7 +786,7 @@ $(&quot;.content&quot;).mCustomScrollbar({
       onOverflowXNone: function(){}
 }</pre></dt>
 <dd>A function to call when content becomes narrow enough and horizontal scrollbar is removed.<br />
-		实例: <br />
+		Example: <br />
 	<pre data-language=&#8221;javascript&#8221;>callbacks:{
     onOverflowXNone:function(){
       console.log(&quot;Horizontal scrolling is not required&quot;);
@@ -796,7 +798,7 @@ $(&quot;.content&quot;).mCustomScrollbar({
       onBeforeUpdate: function(){}
 }</pre></dt>
 <dd>A function to call right before scrollbar(s) are updated.<br />
-		实例: <br />
+		Example: <br />
 	<pre data-language=&#8221;javascript&#8221;>callbacks:{
     onBeforeUpdate:function(){
       console.log(&quot;Scrollbars will update&quot;);
@@ -808,7 +810,7 @@ $(&quot;.content&quot;).mCustomScrollbar({
       onUpdate: function(){}
 }</pre></dt>
 <dd>A function to call when scrollbar(s) are updated.<br />
-		实例: <br />
+		Example: <br />
 	<pre data-language=&#8221;javascript&#8221;>callbacks:{
     onUpdate:function(){
       console.log(&quot;Scrollbars updated&quot;);
@@ -820,7 +822,7 @@ $(&quot;.content&quot;).mCustomScrollbar({
       onImageLoad: function(){}
 }</pre></dt>
 <dd>A function to call each time an image inside the element is fully loaded and scrollbar(s) are updated.<br />
-		实例: <br />
+		Example: <br />
 	<pre data-language=&#8221;javascript&#8221;>callbacks:{
     onImageLoad:function(){
       console.log(&quot;Image loaded&quot;);
@@ -832,7 +834,7 @@ $(&quot;.content&quot;).mCustomScrollbar({
       onSelectorChange: function(){}
 }</pre></dt>
 <dd>A function to call each time a type of element is added, removed or changes its size and scrollbar(s) are updated.<br />
-		实例: <br />
+		Example: <br />
 	<pre data-language=&#8221;javascript&#8221;>callbacks:{
     onSelectorChange:function(){
       console.log(&quot;Scrollbars updated&quot;);
@@ -955,13 +957,13 @@ $(selector).mCustomScrollbar(&quot;scrollTo&quot;,300);
 </pre>
 <hr />
 </div>
-<h4>方法选项</h4>
+<h4>Method options</h4>
 <p> </p>
 <div class="plugin-data">
 <dl>
 <dt><pre data-language=&#8221;javascript&#8221;>scrollInertia: integer</pre></dt>
-<dd>以毫秒为单位滚动到目标的持续时间，值.<br />
-		实例:<br />
+<dd>Scroll-to duration, value in milliseconds.<br />
+		Example:<br />
 	<pre data-language=&#8221;javascript&#8221;>$(selector).mCustomScrollbar(&quot;scrollTo&quot;,&quot;bottom&quot;,{
     scrollInertia:3000
 });</pre></dd>
@@ -969,31 +971,31 @@ $(selector).mCustomScrollbar(&quot;scrollTo&quot;,300);
 <dl>
 <dt><pre data-language=&#8221;javascript&#8221;>scrollEasing: &quot;string&quot;</pre></dt>
 <dd>Scroll-to animation easing, values: <code>&quot;linear&quot;</code>, <code>&quot;easeOut&quot;</code>, <code>&quot;easeInOut&quot;</code>.<br />
-		实例:<br />
+		Example:<br />
 	<pre data-language=&#8221;javascript&#8221;>$(selector).mCustomScrollbar(&quot;scrollTo&quot;,&quot;bottom&quot;,{
     scrollEasing:&quot;easeOut&quot;
 });</pre></dd>
 </dl>
 <dl>
 <dt><pre data-language=&#8221;javascript&#8221;>moveDragger: boolean</pre></dt>
-<dd>滚动滚动条匕首（而不是内容）.<br />
-		实例:<br />
+<dd>Scroll scrollbar dragger (instead of content).<br />
+		Example:<br />
 	<pre data-language=&#8221;javascript&#8221;>$(selector).mCustomScrollbar(&quot;scrollTo&quot;,80,{
     moveDragger:true
 });</pre></dd>
 </dl>
 <dl>
 <dt><pre data-language=&#8221;javascript&#8221;>timeout: integer</pre></dt>
-<dd>设置超时方法（默认的超时时间是为了与自动滚动更新工作60毫秒），以毫秒为单位的价值.<br />
-		实例:<br />
+<dd>Set a timeout for the method (the default timeout is 60 ms in order to work with automatic scrollbar update), value in milliseconds.<br />
+		Example:<br />
 	<pre data-language=&#8221;javascript&#8221;>$(selector).mCustomScrollbar(&quot;scrollTo&quot;,&quot;top&quot;,{
     timeout:1000
 });</pre></dd>
 </dl>
 <dl>
 <dt><pre data-language=&#8221;javascript&#8221;>callbacks: boolean</pre></dt>
-<dd>触发用户定义后回调滚动到完成.<br />
-		实例:<br />
+<dd>Trigger user defined callbacks after scroll-to completes.<br />
+		Example:<br />
 	<pre data-language=&#8221;javascript&#8221;>$(selector).mCustomScrollbar(&quot;scrollTo&quot;,&quot;left&quot;,{
     callbacks:false
 });</pre></dd>
@@ -1001,7 +1003,7 @@ $(selector).mCustomScrollbar(&quot;scrollTo&quot;,300);
 </div>
 <h3 id="methods-section-stop">stop</h3>
 <p><strong>Usage</strong> <code>$(selector).mCustomScrollbar(&quot;stop&quot;);</code>
-<p>停止所有正在运行的滚动动画（有用的，当你想中断先前 <em>scrollTo</em> method call).  </p>
+<p>Stops any running scrolling animations (usefull when you wish to interupt a previously <em>scrollTo</em> method call).  </p>
 <h3 id="methods-section-disable">disable</h3>
 <p><strong>Usage</strong> <code>$(selector).mCustomScrollbar(&quot;disable&quot;);</code> </p>
 <p>Calling <em>disable</em> method will <strong>temporarily disable the scrollbar</strong> (<a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/disable_destroy_example.html" target="_blank">demo</a>). Disabled scrollbars can be re-enable by calling the <em>update</em> method. </p>
@@ -1010,13 +1012,13 @@ $(selector).mCustomScrollbar(&quot;scrollTo&quot;,300);
 <p><a href="#expand-info">view examples</a> </p>
 <div class="expand-info">
 <pre data-language=&#8221;javascript&#8221;>
-/* 初始化插件 */
+/* initialize plugin */
 $(selector).mCustomScrollbar();
 
-/*在你的JS脚本/代码禁用滚动一些点 */
+/* at some point in your js script/code disable scrollbar */
 $(selector).mCustomScrollbar(&quot;disable&quot;);
 
-/* 根据需要重新启用滚动 */
+/* re-enable scrollbar as needed */
 $(selector).mCustomScrollbar(&quot;update&quot;);
 </pre>
 <hr />
@@ -1030,23 +1032,23 @@ $(selector).mCustomScrollbar(&quot;update&quot;);
 /* initialize plugin */
 $(selector).mCustomScrollbar();
 
-/* 在你的JS脚本/代码中的一些点破坏滚动条 */
+/* at some point in your js script/code destroy scrollbar */
 $(selector).mCustomScrollbar(&quot;destroy&quot;);
 </pre>
 <hr />
 </div>
-<h2 id="styling-section">滚动条的造型和放大器;主题</h2>
+<h2 id="styling-section">Scrollbar styling &amp; themes</h2>
 <p>You can design and visually customize your scrollbars with <strong>pure CSS</strong>, using <em><a href="https://github.com/malihu/malihu-custom-scrollbar-plugin/blob/master/jquery.mCustomScrollbar.css" target="_blank">jquery.mCustomScrollbar.css</a></em> which contains the default/basic styling and all scrollbar themes. </p>
-<p>The easiest/quickest way is to select a ready-to-use scrollbar theme. For 实例: </p>
+<p>The easiest/quickest way is to select a ready-to-use scrollbar theme. For example: </p>
 <pre data-language=&#8221;javascript&#8221;>
 $(selector).mCustomScrollbar({
   theme:&quot;dark&quot;
 });
 </pre>
 <p><a href="http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/scrollbar_themes_demo.html" target="_blank">View all ready-to-use themes</a></p>
-<p>您可以直接在修改默认的样式或主题<em>jquery.mCustomScrollbar.css</em>或通过另一个样式覆盖CSS规则. </p>
-<h3>创建一个新的滚动条主题</h3>
-<p>为您的主题创建一个名称（例如： &#8220;my-theme&#8221;) 并将其设置为的值 <em>theme</em> 选项 </p>
+<p>You can modify the default styling or any theme either directly in <em>jquery.mCustomScrollbar.css</em> or by overwriting the CSS rules in another stylesheet. </p>
+<h3>Creating a new scrollbar theme</h3>
+<p>Create a name for your theme (e.g. &#8220;my-theme&#8221;) and set it as the value of the <em>theme</em> option </p>
 <pre data-language=&#8221;javascript&#8221;>
 $(selector).mCustomScrollbar({
     theme:&quot;my-theme&quot;
@@ -1058,10 +1060,10 @@ $(selector).mCustomScrollbar({
 .mCS-my-theme.mCSB_scrollTools .mCSB_draggerRail{ background-color: white; } 
 /* and so on... */
 </pre>
-<p>以相同的方式可以克隆现有主题（例如 &#8220;dark&#8221;), 改变选择器（例如， <code>.mCS-dark</code>) 以自己的主题名称（例如： <code>.mCS-my-theme</code>) 并修改其CSS规则.</p>
+<p>In the same manner you can clone any existing theme (e.g. &#8220;dark&#8221;), change its selector (e.g. <code>.mCS-dark</code>) to your own theme name (e.g. <code>.mCS-my-theme</code>) and modify its CSS rules.</p>
 <h3>Scrollbar markup</h3>
-<p>该插件适用于特定ID（唯一）和/或类每一个滚动条元素/组件，这意味着你可以针对和修改任何滚动条在多个方面。 </p>
-<p>例如，用一个滚动每个元件得到一类独特的形式<code>_mCS_1</code>, <code>_mCS_2</code>等，每个容器的滚动条元素获得一个唯一的ID的形式 <code>mCSB_1_scrollbar_vertical</code>, <code>mCSB_2_scrollbar_vertical</code> etc. Every scrollbar dragger gets a unique id in the form of <code>mCSB_1_dragger_vertical</code>, <code>mCSB_2_dragger_vertical</code> etc. in addition to the class <code>mCSB_dragger</code>. All these mean that you can do stuff like: </p>
+<p>The plugin applies specific id (unique) and/or classes to every scrollbar element/component, meaning that you can target and modify any scrollbar in more than one ways. </p>
+<p>For example, every element with a scrollbar gets a unique class in the form of <code>_mCS_1</code>, <code>_mCS_2</code> etc. Every scrollbar container element gets a unique id in the form of <code>mCSB_1_scrollbar_vertical</code>, <code>mCSB_2_scrollbar_vertical</code> etc. Every scrollbar dragger gets a unique id in the form of <code>mCSB_1_dragger_vertical</code>, <code>mCSB_2_dragger_vertical</code> etc. in addition to the class <code>mCSB_dragger</code>. All these mean that you can do stuff like: </p>
 <pre data-language=&#8221;css&#8221;>
 ._mCS_1 .mCSB_dragger .mCSB_dragger_bar{ background-color: red; }
 
@@ -1077,7 +1079,7 @@ $(selector).mCustomScrollbar({
 </pre>
 <p><a href="http://manos.malihu.gr/wp-content/uploads/2012/07/scrollbar_layout.png" target="_blank"><img src="http://manos.malihu.gr/wp-content/uploads/2012/07/scrollbar_layout.png" alt="Custom scrollbar layout" title="Custom scrollbar layout" width="400" height="560" class="alignnone size-full wp-image-579" srcset="http://manos.malihu.gr/wp-content/uploads/2012/07/scrollbar_layout.png 400w, http://manos.malihu.gr/wp-content/uploads/2012/07/scrollbar_layout-214x300.png 214w" sizes="(max-width: 400px) 100vw, 400px" /></a></p>
 <h2 id="callbacks-section">User-defined callbacks</h2>
-<p>您可以通过内部美其名曰触发自己的js函数（S） <em>mCustomScrollbar</em> 回调选项参数 </p>
+<p>You can trigger your own js function(s) by calling them inside <em>mCustomScrollbar</em> callbacks option parameter </p>
 <pre data-language=&#8221;javascript&#8221;>
 $(&quot;.content&quot;).mCustomScrollbar({
     callbacks:{
@@ -1091,17 +1093,17 @@ function myCustomFn(el){
     console.log(el.mcs.top);
 }
 </pre>
-<p>在上面的例子中，每个滚动事件结束的时间和内容已经停止滚动，内容的榜首位置将在浏览器的控制台登录。有对滚动事件的每个步骤提供的回调: </p>
+<p>In the example above, each time a scroll event ends and content has stopped scrolling, the content&#8217;s top position will be logged in browser&#8217;s console. There are available callbacks for each step of the scrolling event: </p>
 <ul>
-<li><code>onScrollStart</code> &#8211;触发滚动事件开始的时刻</li>
-<li><code>whileScrolling</code> &#8211; 而滚动事件被触发运行</li>
-<li><code>onScroll</code> &#8211; 当一个滚动事件触发完成</li>
-<li><code>onTotalScroll</code> &#8211; 当内容一路滚动到底部或右触发</li>
-<li><code>onTotalScrollBack</code> &#8211; 当内容已经滚动一路回顶部或左边触发</li>
+<li><code>onScrollStart</code> &#8211; triggers the moment a scroll event starts</li>
+<li><code>whileScrolling</code> &#8211; triggers while scroll event is running</li>
+<li><code>onScroll</code> &#8211; triggers when a scroll event completes</li>
+<li><code>onTotalScroll</code> &#8211; triggers when content has scrolled all the way to bottom or right</li>
+<li><code>onTotalScrollBack</code> &#8211; triggers when content has scrolled all the way back to top or left</li>
 </ul>
-<p>可以设置为两个偏移值（像素）<code>onTotalScroll</code>和 <code>onTotalScrollBack</code>通过设置<code>onTotalScrollOffset</code> 和<code>onTotalScrollBackOffset</code>分别 (<a href="#expand-info">查看示例</a>). </p>
+<p>You can set an offset value (pixels) for both <code>onTotalScroll</code> and <code>onTotalScrollBack</code> by setting <code>onTotalScrollOffset</code> and <code>onTotalScrollBackOffset</code> respectively (<a href="#expand-info">view example</a>). </p>
 <div class="expand-info">
-以下将触发回调函数，当内容滚动到下减100像素 </p>
+The following will trigger the callback function when content has scrolled to bottom minus 100 pixels </p>
 <pre data-language=&#8221;javascript&#8221;>
 $(&quot;.content&quot;).mCustomScrollbar({
     callbacks:{
@@ -1114,7 +1116,7 @@ $(&quot;.content&quot;).mCustomScrollbar({
 </pre>
 <hr />
 </div>
-<p>默认, <code>onTotalScroll</code> 和 <code>onTotalScrollBack</code> 回调被重复触发。为了防止多次调用时，内容是他们的偏移量，集中 <code>alwaysTriggerOffsets</code>选项 <code>false</code> (<a href="#expand-info">查看示例</a>).</p>
+<p>By default, <code>onTotalScroll</code> and <code>onTotalScrollBack</code> callbacks are triggered repeatedly. To prevent multiple calls when content is within their offset, set <code>alwaysTriggerOffsets</code> option to <code>false</code> (<a href="#expand-info">view example</a>).</p>
 <div class="expand-info">
 <pre data-language=&#8221;javascript&#8221;>
 $(&quot;.content&quot;).mCustomScrollbar({
@@ -1140,22 +1142,22 @@ $(&quot;.content&quot;).mCustomScrollbar({
 <li><a href="#plugin-data-callbacks-onImageLoad" rel="ps2id"><code>onImageLoad</code></a></li>
 <li><a href="#plugin-data-callbacks-onSelectorChange" rel="ps2id"><code>onSelectorChange</code></a></li>
 </ul>
-<h3>返回值</h3>
-<p>该脚本返回一个数字值和相关对象来滚动，你可以在自己的函数使用</p>
+<h3>Returning values</h3>
+<p>The script returns a number of values and objects related to scrollbar that you can use in your own functions</p>
 <ul>
-<li><code>this</code> &#8211; 包含滚动条原始元素（S）</li>
-<li><code>this.mcs.content</code> &#8211; 原来的内容作为包装jQuery对象</li>
-<li><code>this.mcs.top</code> &#8211; 内容顶部位置（像素）</li>
-<li><code>this.mcs.left</code> &#8211;左位置内容（像素）</li>
-<li><code>this.mcs.draggerTop</code> &#8211; 滚动牵引机顶位置（像素）</li>
-<li><code>this.mcs.draggerLeft</code> &#8211; 滚动条匕首左侧位置（像素）</li>
-<li><code>this.mcs.topPct</code> &#8211; 内容垂直滚动百分比</li>
-<li><code>this.mcs.leftPct</code> &#8211; 内容水平滚动百分比</li>
-<li><code>this.mcs.direction</code> &#8211; 内容滚动方向（y或x）</li>
+<li><code>this</code> &#8211; the original element containing the scrollbar(s)</li>
+<li><code>this.mcs.content</code> &#8211; the original content wrapper as jquery object</li>
+<li><code>this.mcs.top</code> &#8211; content&#8217;s top position (pixels)</li>
+<li><code>this.mcs.left</code> &#8211; content&#8217;s left position (pixels)</li>
+<li><code>this.mcs.draggerTop</code> &#8211; scrollbar dragger&#8217;s top position (pixels)</li>
+<li><code>this.mcs.draggerLeft</code> &#8211; scrollbar dragger&#8217;s left position (pixels)</li>
+<li><code>this.mcs.topPct</code> &#8211; content vertical scrolling percentage</li>
+<li><code>this.mcs.leftPct</code> &#8211; content horizontal scrolling percentage</li>
+<li><code>this.mcs.direction</code> &#8211; content&#8217;s scrolling direction (y or x)</li>
 </ul>
-<p><a href="#expand-info">查看示例</a> </p>
+<p><a href="#expand-info">view examples</a> </p>
 <div class="expand-info">
-当滚动到下装载更多内容</p>
+Load more content when scrolled to bottom</p>
 <pre data-language=&#8221;javascript&#8221;>
 $(selector).mCustomScrollbar({
     callbacks:{
@@ -1165,7 +1167,7 @@ $(selector).mCustomScrollbar({
     }
 });
 </pre>
-<p>当内容中的至少一半被滚动运行代码 </p>
+<p>Run code when at least half of the content is scrolled </p>
 <pre data-language=&#8221;javascript&#8221;>
 $(selector).mCustomScrollbar({
     callbacks:{
@@ -1180,12 +1182,12 @@ $(selector).mCustomScrollbar({
 </pre>
 <hr />
 </div>
-<h2>具体的插件，jQuery的表情</h2>
+<h2>Plugin-specific jQuery expressions</h2>
 <div class="plugin-data">
 <dl>
 <dt><pre data-language=&#8221;javascript&#8221;>$(&quot;#myID:mcsInView&quot;)</pre></dt>
-<dd>选择元素）在你的内容是滚动视窗内的.<br />
-		作为条件: <code>$(&quot;#myID&quot;).is(&quot;:mcsInView&quot;);</code></dd>
+<dd>Select element(s) in your content that are within scrollable viewport.<br />
+		As condition: <code>$(&quot;#myID&quot;).is(&quot;:mcsInView&quot;);</code></dd>
 </dl>
 <dl>
 <dt><pre data-language=&#8221;javascript&#8221;>$(&quot;.content:mcsOverflow&quot;)</pre></dt>
@@ -1194,23 +1196,23 @@ $(selector).mCustomScrollbar({
 </dl>
 <dl>
 <dt><pre data-language=&#8221;javascript&#8221;>$(&quot;#myID:mcsInSight&quot;)</pre> <pre data-language=&#8221;javascript&#8221;>$(&quot;#myID:mcsInSight(exact)&quot;)</pre></dt>
-<dd>在您的内容中选择元素（县），是鉴于滚动视口。 使用 <code>exact</code>参数将包括在视图中的可滚动视口的有它们（甚至1个像素）的任何部分的元素.<br />
+<dd>Select element(s) in your content that are in view of the scrollable viewport. Using the <code>exact</code> parameter will include elements that have any part of them (even 1 pixel) in view of the scrollable viewport.<br />
 		As condition: <code>$(&quot;#myID&quot;).is(&quot;:mcsInSight&quot;);</code>, <code>$(&quot;#myID&quot;).is(&quot;:mcsInSight(exact)&quot;);</code></dd>
 </dl>
 </div>
-<h2>插件依赖和; 要求</h2>
+<h2>Plugin dependencies &amp; requirements</h2>
 <ul>
-<li><a href="http://jquery.com" target="_blank">jQuery</a>1.6.0或更高版本</li>
+<li><a href="http://jquery.com" target="_blank">jQuery</a> version 1.6.0 or higher</li>
 <li>Mouse-wheel support
 <ul>
-<li><a href="https://github.com/brandonaaron/jquery-mousewheel" target="_blank">jQuery的鼠标滚轮插件</a></li>
+<li><a href="https://github.com/brandonaaron/jquery-mousewheel" target="_blank">jQuery mousewheel plugin</a></li>
 </ul>
 </li>
 </ul>
 <h2>License</h2>
-			<p itemprop="license"><strong>这项工作是在释放 <a rel="license" href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a></strong>. <br />您可以自由使用，研究，完善和修改的地方和你喜欢的.</strong> <br />
+			<p itemprop="license"><strong>This work is released under the <a rel="license" href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a></strong>. <br />You are free to use, study, improve and modify it wherever and however you like.</strong> <br />
 			<a rel="license" href="http://opensource.org/licenses/MIT" target="_blank">http://opensource.org/licenses/MIT</a> </p>
-			<p class="donate">捐赠有助于大大制定和更新免费的软件，并运行此博客 🙂</p>
+			<p class="donate">Donating helps greatly in developing and updating free software and running this blog 🙂</p>
 			<div class="donate-link">
 				<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 					<input type="hidden" name="cmd" value="_s-xclick">
@@ -1225,25 +1227,25 @@ $(selector).mCustomScrollbar({
 							<div class="article-tags">
 								<h3>Tags</h3><p><a href="http://manos.malihu.gr/tag/jquery/" rel="tag">jquery</a></p>							</div>
 															<div class="related-articles">
-									<h2>本文相关文章</h2>
+									<h2>Posts related to this article</h2>
 									<p>
 										<a href='
-http://manos.malihu.gr/add-a-custom-scrollbar-to-your-twitter-widget/'>一个自定义的滚动条添加到你的Twitter小工具</a> <a href='
-http://manos.malihu.gr/code-example/responsive-custom-scrollbar-with-css3-media-queries/'>与CSS3媒体查询响应定制的滚动条</a> <a href='
-http://manos.malihu.gr/code-example/scroll-to-id-within-element-with-custom-scrollbars/'>元素中滚动到ID自定义滚动条（S）</a> <a href='
-http://manos.malihu.gr/code-example/horizontal-custom-scrollbar-tutorial/'>水平滚动条定制教程</a> 									</p>
+http://manos.malihu.gr/add-a-custom-scrollbar-to-your-twitter-widget/'>Add a custom scrollbar to your twitter widget</a> <a href='
+http://manos.malihu.gr/code-example/responsive-custom-scrollbar-with-css3-media-queries/'>Responsive custom scrollbar with CSS3 media queries</a> <a href='
+http://manos.malihu.gr/code-example/scroll-to-id-within-element-with-custom-scrollbars/'>Scroll to id within element with custom scrollbar(s)</a> <a href='
+http://manos.malihu.gr/code-example/horizontal-custom-scrollbar-tutorial/'>Horizontal custom scrollbar tutorial</a> 									</p>
 								</div>
 													</div>
 					</article>
 					<div class="articles-nav clearfix">
-						<a href="http://manos.malihu.gr/jquery-thumbnail-scroller/" rel="prev">jQuery的缩略图滚动</a><a href="http://manos.malihu.gr/jquery-image-panning/" rel="next">jQuery image panning</a>					</div>
+						<a href="http://manos.malihu.gr/jquery-thumbnail-scroller/" rel="prev">jQuery thumbnail scroller</a><a href="http://manos.malihu.gr/jquery-image-panning/" rel="next">jQuery image panning</a>					</div>
 												 <section id="comments">
-	<h2 itemprop="commentCount">5,340 注释 <a href="http://manos.malihu.gr/jquery-custom-content-scroller/feed/" target="_blank" title="Comments feed" class="gen-icon social-comments-rss"><span><svg version="1.1" viewBox="0 0 32 32" preserveAspectRatio="xMinYMin meet"><g></g><path d="M4.259 23.467c-2.35 0-4.259 1.917-4.259 4.252 0 2.349 1.909 4.244 4.259 4.244 2.358 0 4.265-1.895 4.265-4.244-0-2.336-1.907-4.252-4.265-4.252zM0.005 10.873v6.133c3.993 0 7.749 1.562 10.577 4.391 2.825 2.822 4.384 6.595 4.384 10.603h6.16c-0-11.651-9.478-21.127-21.121-21.127zM0.012 0v6.136c14.243 0 25.836 11.604 25.836 25.864h6.152c0-17.64-14.352-32-31.988-32z"></path></svg></span></a></h2>
-	<a href="#respond" class="post-comment">发表评论</a>
+	<h2 itemprop="commentCount">5,340 Comments <a href="http://manos.malihu.gr/jquery-custom-content-scroller/feed/" target="_blank" title="Comments feed" class="gen-icon social-comments-rss"><span><svg version="1.1" viewBox="0 0 32 32" preserveAspectRatio="xMinYMin meet"><g></g><path d="M4.259 23.467c-2.35 0-4.259 1.917-4.259 4.252 0 2.349 1.909 4.244 4.259 4.244 2.358 0 4.265-1.895 4.265-4.244-0-2.336-1.907-4.252-4.265-4.252zM0.005 10.873v6.133c3.993 0 7.749 1.562 10.577 4.391 2.825 2.822 4.384 6.595 4.384 10.603h6.16c-0-11.651-9.478-21.127-21.121-21.127zM0.012 0v6.136c14.243 0 25.836 11.604 25.836 25.864h6.152c0-17.64-14.352-32-31.988-32z"></path></svg></span></a></h2>
+	<a href="#respond" class="post-comment">Post a comment</a>
 	
 	
 	
-			<p class="paging">评论页面: <a class="prev page-numbers" href="http://manos.malihu.gr/jquery-custom-content-scroller/comment-page-77/#comments">Previous</a>
+			<p class="paging">Comments pages: <a class="prev page-numbers" href="http://manos.malihu.gr/jquery-custom-content-scroller/comment-page-77/#comments">Previous</a>
 <a class='page-numbers' href='http://manos.malihu.gr/jquery-custom-content-scroller/comment-page-1/#comments'>1</a>
 <span class="page-numbers dots">&hellip;</span>
 <a class='page-numbers' href='http://manos.malihu.gr/jquery-custom-content-scroller/comment-page-76/#comments'>76</a>
@@ -1254,11 +1256,11 @@ http://manos.malihu.gr/code-example/horizontal-custom-scrollbar-tutorial/'>水�
 		<div class="comment-container clearfix">
 			<span class="avatar" data-src-url="http://manos.malihu.gr/wp-content/glc_cache/5fc9210d2f68c4abd973a967f75bc468-96.jpg"></span>
 			<span class="author"><a href='http://www.tribu.it' rel='external nofollow' class='url'>Gabriele</a></span>
-			<div class="comment-meta"><span class="date">发表于2016年9月21日在 21:21</span> <a href="http://manos.malihu.gr/jquery-custom-content-scroller/comment-page-78/#comment-21239" title="Permalink to this comment">Permalink</a> </div>
+			<div class="comment-meta"><span class="date">Posted on September 21, 2016 at 21:21</span> <a href="http://manos.malihu.gr/jquery-custom-content-scroller/comment-page-78/#comment-21239" title="Permalink to this comment">Permalink</a> </div>
 			  
 			<div class="comment-content" id="comment-21239">
 				<p>Hello Malihu,<br />
-我想你的伟大插件我的新闻网站。我创建了一个箱子，在自动滚动的作品。他停在鼠标悬停并恢复鼠标离开。到目前为止，这是完美的。我想早点进入超时，以便有时间滚动开始之前读的第一消息，但我不能。无论我插入超时或根本不工作或滚动没有参与。附上我的脚本。如果你能帮助我，我真的会很高兴. Thank you.</p>
+I&#8217;m trying your great plug-in for my news site. I created a box that works in autoscroll. He stops at mouseover and resumes mouseleave. So far this is perfect. I wanted to enter a timeout early to allow time to read the first news before the scroll begins, but I can not. Wherever I insert the time-out or does not work or the scroll no part at all. I enclose the script. If you can help me I really would be a great pleasure. Thank you.</p>
 <p><code>
 &lt;!DOCTYPE html&gt;
 &lt;!--[if IE 8 ]&gt;&lt;html lang=&quot;en&quot; class=&quot;ie8&quot;&gt;&lt;![endif]--&gt;
@@ -1278,7 +1280,7 @@ http://manos.malihu.gr/code-example/horizontal-custom-scrollbar-tutorial/'>水�
   &lt;script src=&quot;http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js&quot;&gt;&lt;/script&gt;
   &lt;![endif]--&gt;
   
-  &lt;!-- 自定义样式表的滚动条 --&gt;
+  &lt;!-- custom scrollbar stylesheet --&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;../jquery.mCustomScrollbar.css&quot;&gt;
   
 &lt;/head&gt;
@@ -1288,7 +1290,7 @@ http://manos.malihu.gr/code-example/horizontal-custom-scrollbar-tutorial/'>水�
     
       &lt;!-- content --&gt;
       &lt;div id=&quot;content-1&quot; class=&quot;content&quot;&gt;
-        &lt;p&gt;Lorem存有悲坐阿梅德，consectetur adipisicing ELIT，sed的根本eiusmod tempor incididunt UT labore等dolore麦格纳aliqua。UT enim广告微量veniam，QUIS nostrud实习ullamco laboris暂准UT aliquip前EA commodo consequat.&lt;/p&gt; 
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt; 
         &lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
         &lt;p&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.&lt;/p&gt; 
         &lt;p&gt;Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.&lt;/p&gt; 
@@ -1310,7 +1312,7 @@ http://manos.malihu.gr/code-example/horizontal-custom-scrollbar-tutorial/'>水�
         &lt;p&gt;End of content.&lt;/p&gt;
   
       &lt;/div&gt;
-&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;http://ajax.c2cmalls.com/ajax/libs/jquery/1.11.0/jquery.min.js&quot;&gt;&lt;/script&gt;
   &lt;script&gt;window.jQuery || document.write(&#039;&lt;script src=&quot;../js/minified/jquery-1.11.0.min.js&quot;&gt;&lt;\/script&gt;&#039;)&lt;/script&gt;
   
   &lt;!-- custom scrollbar plugin --&gt;
